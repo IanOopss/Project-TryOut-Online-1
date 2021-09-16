@@ -9,6 +9,16 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+//models
+use App\Models\M_admin;
+use App\Models\M_informasi;
+use App\Models\M_jawaban;
+use App\Models\M_lab;
+use App\Models\M_nilai;
+use App\Models\M_pertanyaan;
+use App\Models\M_peserta;
+use App\Models\M_soal;
+
 /**
  * Class BaseController
  *
@@ -35,7 +45,7 @@ class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = [];
+    protected $helpers = ['url','form','the'];
 
     /**
      * Constructor.
@@ -48,5 +58,14 @@ class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
+
+		$this->admin 		= new M_admin();
+		$this->informasi 	= new M_informasi();
+		$this->jawaban 	    = new M_jawaban();
+		$this->lab 		    = new M_lab();
+		$this->nilai 		= new M_nilai();
+		$this->pertanyaan	= new M_pertanyaan();
+		$this->peserta		= new M_peserta();
+		$this->soal 		= new M_soal();
     }
 }
