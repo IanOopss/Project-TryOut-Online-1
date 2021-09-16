@@ -1,7 +1,7 @@
 <?php 
 foreach ($data_peserta as $key) {
-  $id_peserta = $key->id_peserta;
-  $nim = $key->nim;
+  $id_peserta = $key['id_peserta'];
+  $nim = $key['nim'];
 }
  ?>
 <body class="hold-transition skin-blue layout-top-nav">
@@ -10,16 +10,16 @@ foreach ($data_peserta as $key) {
     <div class="content-wrapper">
       <div class="container">
         <br>
-        <img src="<?php echo base_url(); ?>assets/academy/img/core-img/logo.png" alt="">
+        <img src="<?= base_url(); ?>/assets/academy/img/core-img/logo.png" alt="">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <h1><?php echo $title; ?></h1>
+          <h1><?= $title; ?></h1>
         </section>
         
         <!-- Main content -->
         <section class="content">
           <div class="callout callout-info">
-            <h4><?php echo $judul; ?></h4>
+            <h4><?= $judul; ?></h4>
 
             <p>Unggah Berkas sesuai dengan format!</p>
           </div>
@@ -28,14 +28,14 @@ foreach ($data_peserta as $key) {
             <p>Berkas Lamaran Disatukan Dalam Satu Pdf secara berurutan dengan Ukuran Maksimal 2 MB</p>
           </div>
 
-          <?php $this->load->view('layouts/notifikasi'); ?>
+          <?= $this->include('layouts/notifikasi'); ?>
 
           <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">Form <?php echo $judul; ?></h3>
+              <h3 class="box-title">Form <?= $judul; ?></h3>
             </div>
             
-            <?php echo form_open_multipart('registrasi/verifikasi_tahap3/'.$id_peserta.'/'.$nim); ?>
+            <?= form_open_multipart('registrasi/verifikasi_tahap3/'.$id_peserta.'/'.$nim); ?>
                 <div class="box-body">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -46,7 +46,7 @@ foreach ($data_peserta as $key) {
                         foreach ($formasi_lab as $key) {
                           
                          ?>
-                        <option value="<?php echo $key->id_lab; ?>"><?php echo $key->nama_lab; ?></option>
+                        <option value="<?= $key['id_lab']; ?>"><?= $key['nama_lab']; ?></option>
                       <?php 
                       } ?>
                       </select>

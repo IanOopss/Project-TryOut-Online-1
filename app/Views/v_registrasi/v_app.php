@@ -1,14 +1,12 @@
 <?php
 
-$this->load->view('layouts/head'); 
+echo $this->include('layouts/head'); 
 
 if ($page == 'tahap_1') {
-  
-	$informasi = $this->M_informasi->data_informasi()->result();
 		foreach ($informasi as $info) {
-			$nama_kegiatan = $info->nama_kegiatan;
-			$tgl_pendaftaran = $info->tgl_pendaftaran;
-			$tgl_tutup = $info->tgl_tutup;
+			$nama_kegiatan = $info['nama_kegiatan'];
+			$tgl_pendaftaran = $info['tgl_pendaftaran'];
+			$tgl_tutup = $info['tgl_tutup'];
 		}
 
 		$tgl_sekarang = date('Y-m-d');
@@ -31,7 +29,7 @@ elseif ($page == 'tahap_3') {
 elseif ($page == 'registrasi_selesai') {
   include 'registrasi_selesai.php';
 }
-$this->load->view('layouts/foot');
+echo $this->include('layouts/foot');
 
 ?>
 

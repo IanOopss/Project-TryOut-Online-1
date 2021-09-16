@@ -1,14 +1,13 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <img src="<?php echo base_url(); ?>assets/academy/img/core-img/logo.png" alt="">
+    <img src="<?= base_url(); ?>/assets/academy/img/core-img/logo.png" alt="">
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Login Peserta</p>
-    <?php $this->load->view('layouts/notifikasi'); ?>
 
-    <?php echo form_open('login/peserta_login'); ?>
+    <?= form_open('login/peserta_login'); ?>
       <div class="form-group has-feedback">
         <input type="text" class="form-control" data-inputmask='"mask": "999999999"' data-mask name="username" placeholder="Username">
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -28,7 +27,7 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <a href="<?php echo base_url('/') ?>">
+          <a href="<?= base_url('/') ?>">
             <button type="button" class="btn btn-success btn-block btn-flat">Home</button>
           </a>
         </div>

@@ -57,8 +57,8 @@ class BaseController extends Controller
 
         // Preload any models, libraries, etc, here.
 
-        // E.g.: $this->session = \Config\Services::session();
-
+        $this->session = \Config\Services::session();
+        
 		$this->admin 		= new M_admin();
 		$this->informasi 	= new M_informasi();
 		$this->jawaban 	    = new M_jawaban();
