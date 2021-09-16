@@ -9,5 +9,8 @@ class M_soal extends Model {
 	protected $table      = 'tbl_soal';
     protected $returnType     = 'array';
     protected $allowedFields = ['nama_soal', 'jumlah_soal', 'minimal_benar', 'total_nilai', 'passing_grade'];
-
+    
+	public function data_jenis_soal(){
+		return $this->findAll();
+	}
 }

@@ -1,3 +1,7 @@
+<?= $this->extend('_layout/user/_template') ?>
+
+<?= $this->section('content') ?>
+
 <!-- ##### Breadcumb Area Start ##### -->
 <div class="breadcumb-area">
     <img src="<?php echo base_url(); ?>assets/academy/img/bg-img/breadcumb.jpg" class="breadcumb-area bg-img">
@@ -52,3 +56,5 @@
     </div>
 </section>
 <!-- ##### About Us Area End ##### -->
+
+<?= $this->endSection() ?>

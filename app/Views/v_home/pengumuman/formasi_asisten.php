@@ -1,6 +1,10 @@
+<?= $this->extend('_layout/user/_template') ?>
+
+<?= $this->section('content') ?>
+
 <!-- ##### Breadcumb Area Start ##### -->
 <div class="breadcumb-area">
-    <img src="<?php echo base_url(); ?>assets/academy/img/bg-img/breadcumb.jpg" class="breadcumb-area bg-img">
+    <img src="<?= base_url(); ?>/assets/academy/img/bg-img/breadcrumb.jpg" class="breadcumb-area bg-img">
     <div class="bradcumbContent">
         <h2>Formasi Asisten</h2>
     </div>
@@ -22,10 +26,10 @@
                         <i class="icon-assistance"></i>
                     </div>
                     <div class="course-content">
-                        <h4><?php echo $key->nama_lab; ?></h4>
-                        <p>Jumalah Formasi : <?php echo $key->jumlah_formasi; ?> </p>
-                        <p>Jumlah Pelamar : <?php echo $key->jumlah_peserta; ?></p>
-                        <a href="<?php echo base_url('home/download/'.$key->lampiran); ?>">Download Persyaratan</a>
+                        <h4><?= $key['nama_lab'] ?></h4>
+                        <p>Jumalah Formasi : <?= $key['jumlah_formasi'] ?> </p>
+                        <p>Jumlah Pelamar : <?= $key['jumlah_peserta'] ?></p>
+                        <a href="<?= base_url('home/download/'.$key['lampiran']); ?>">Download Persyaratan</a>
                     </div>
                 </div>
             </div>
@@ -36,3 +40,5 @@
     </div>
 </div>
 <!-- ##### Course Area End ##### -->
+
+<?= $this->endSection() ?>

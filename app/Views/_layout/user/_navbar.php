@@ -33,7 +33,7 @@
                                         <li><a href="<?= base_url('home/passing_grade'); ?>">Passing Grade</a></li>
                                     </ul>
                                     <div class="single-mega cn-col-4">
-                                        <img src="<?= base_url(); ?>assets/academy/img/core-img/logos.png" alt="">
+                                        <img src="<?= base_url(); ?>/assets/academy/img/core-img/logos.png" alt="">
                                     </div>
                                 </div>
                             </li>

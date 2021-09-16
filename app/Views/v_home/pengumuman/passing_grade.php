@@ -1,6 +1,10 @@
+<?= $this->extend('_layout/user/_template') ?>
+
+<?= $this->section('content') ?>
+
 <!-- ##### Breadcumb Area Start ##### -->
 <div class="breadcumb-area">
-    <img src="<?php echo base_url(); ?>assets/academy/img/bg-img/breadcumb.jpg" class="breadcumb-area bg-img">
+    <img src="<?= base_url(); ?>assets/academy/img/bg-img/breadcumb.jpg" class="breadcumb-area bg-img">
     <div class="bradcumbContent">
         <h2>Passing Grade</h2>
     </div>
@@ -24,17 +28,17 @@
                 <div class="our-skills-area text-center mb-100">
                     <div class="row">
                         <?php foreach ($jenis_soal as $key) {
-                            $tot = $key->total_nilai;
-                            $pas = $key->passing_grade;
+                            $tot = $key['total_nilai'];
+                            $pas = $key['passing_grade'];
                             $pesentase = ($pas/$tot)*100;
                              ?>
                         <div class="col-12 col-sm-6 col-md-3">
-                            <div class="single-pie-bar mb-30" data-percent="<?php echo $pesentase; ?>">
+                            <div class="single-pie-bar mb-30" data-percent="<?= $pesentase; ?>">
                                 <canvas class="bar-circle" width="70" height="70"></canvas>
-                                <h6><?php echo $key->nama_soal; ?></h6>
-                                <p>Jumlah Soal = <?php echo $key->jumlah_soal; ?> </p>
-                                <p>Total Nilai = <?php echo $tot; ?></p>
-                                <p>Passing Grade = <?php echo $pas; ?></p>
+                                <h6><?= $key['nama_soal']; ?></h6>
+                                <p>Jumlah Soal = <?= $key['jumlah_soal']; ?> </p>
+                                <p>Total Nilai = <?= $tot; ?></p>
+                                <p>Passing Grade = <?= $pas; ?></p>
 
                             </div>
                         </div>
@@ -50,3 +54,5 @@
     </div>
 </section>
 <!-- ***** Elements Area End ***** -->
+
+<?= $this->endSection() ?>
