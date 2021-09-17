@@ -32,7 +32,7 @@ class Login extends BaseController
 		 	$password = $this->input->post('password');
 
 		 	//Cek Login peserta
-			$cek_peserta = $this->peserta->cek_paserta($username)->result();
+			$cek_peserta = $this->peserta->cek_paserta($username);
 		
 			foreach($cek_peserta as $cu)
 			{	
@@ -49,7 +49,7 @@ class Login extends BaseController
 				redirect('login');;
 			}elseif ($pass == $password) {
 
-				$cek_peserta = $this->peserta->cek_paserta($username)->result();
+				$cek_peserta = $this->peserta->cek_paserta($username);
 				foreach($cek_peserta as $sess){
 					$id_peserta 	= $sess->id_peserta;
 					$id_lab			= $sess->id_lab;
@@ -79,7 +79,7 @@ class Login extends BaseController
 	{
 		$data ['title'] 	= "Login Panitia";
 		$data ['page'] 		= "login_panitia";
-		$data ['informasi'] 	= $this->informasi->data_informasi()->result();
+		$data ['informasi'] 	= $this->informasi->data_informasi();
 		
         return view('v_login/v_app', $data);
 	}
@@ -105,7 +105,7 @@ class Login extends BaseController
 		 	$password = $this->input->post('password');
 
 		 	//Cek Login Panitia
-			$cek_panitia = $this->admin->cek_panitia($username)->result();
+			$cek_panitia = $this->admin->cek_panitia($username);
 		
 			foreach($cek_panitia as $cu)
 			{	
@@ -122,7 +122,7 @@ class Login extends BaseController
 				redirect('login/panitia');
 			}elseif ($pass == $password) {
 
-				$cek_panitia = $this->admin->cek_panitia($username)->result();
+				$cek_panitia = $this->admin->cek_panitia($username);
 				foreach($cek_panitia as $sess){
 					$id_admin 		= $sess->id_admin;
 					$username 		= $sess->username;

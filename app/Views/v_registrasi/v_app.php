@@ -29,6 +29,7 @@ elseif ($page == 'tahap_3') {
 elseif ($page == 'registrasi_selesai') {
   include 'registrasi_selesai.php';
 }
+
 echo $this->include('layouts/foot');
 
 ?>
