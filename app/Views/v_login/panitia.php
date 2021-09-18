@@ -6,7 +6,6 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <p class="login-box-msg">Login Panitia Seleksi</p>
-    <?= $this->include('layouts/notifikasi'); ?>
 
     <?= form_open('login/panitia_login'); ?>
       <div class="form-group has-feedback">
@@ -15,10 +14,6 @@
       </div>
       <div class="form-group has-feedback">
         <input type="password" class="form-control" maxlength="15" minlength="8" name="password" placeholder="Password" required>
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" maxlength="15" minlength="8" name="comfirm_password" placeholder="Comfirm Password" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">

@@ -1,5 +1,5 @@
 <?php 
-$this->load->view('layouts/head');
+echo $this->include('layouts/head');
 foreach ($informasi as $key) {
   $tgl_ujian_cat = $key->tgl_ujian_cat;
   $waktu_pengerjaan = $key->waktu_pengerjaan;
@@ -40,25 +40,25 @@ $tgl_sekarang = date('Y-m-d');
               <!-- Menu Toggle Button -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- The user image in the navbar-->
-                 <img src="<?php echo base_url(); ?>assets/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                 <img src="<?= base_url(); ?>assets/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs"><?php echo $pstr->nama_peserta; ?></span>
+                <span class="hidden-xs"><?= $pstr->nama_peserta; ?></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
                 <li class="user-header">
-                  <img src="<?php echo base_url(); ?>assets/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                  <img src="<?= base_url(); ?>assets/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    <?php echo $pstr->nama_peserta; ?>
-                    <small><?php echo $pstr->nim; ?></small>
+                    <?= $pstr->nama_peserta; ?>
+                    <small><?= $pstr->nim; ?></small>
                   </p>
                 </li>
                 
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <div class="pull-right">
-                    <a href="<?php echo base_url('peserta/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="<?= base_url('peserta/logout'); ?>" class="btn btn-default btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>
@@ -97,6 +97,4 @@ $tgl_sekarang = date('Y-m-d');
 </div>
 <!-- ./wrapper -->
 
-<?php 
-$this->load->view('layouts/foot');
- ?>
+<?= $this->include('layouts/foot') ?>

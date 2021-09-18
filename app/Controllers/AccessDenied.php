@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 
-class Access_denied extends BaseController
+class AccessDenied extends BaseController
 {
 	public function index()
 	{

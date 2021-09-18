@@ -33,6 +33,20 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+//auth
+$routes->get('/admin', 'admin::index',['filter' => 'authGuard']);
+$routes->get('/panitia', 'panitia::index',['filter' => 'authGuard']);
+
+//access
+// Admin routes
+$routes->group("admin", ["filter" => "accessGuard"], function ($routes) {
+    $routes->get("/", "admin::index");
+});
+// Editor routes
+$routes->group("peserta", ["filter" => "accessGuard"], function ($routes) {
+    $routes->get("/", "peserta::index");
+});
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

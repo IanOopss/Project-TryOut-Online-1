@@ -13,4 +13,7 @@ class M_lab extends Model {
 		'jumlah_lulus_adm', 'lampiran'
 	];
 
+	public function data_formasi_lab(){
+		return $this->findAll();	
+	}
 }

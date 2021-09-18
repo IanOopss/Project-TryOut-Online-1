@@ -1,5 +1,5 @@
 <?php 
-  $this->load->view('layouts/head');
+  echo $this->include('layouts/head');
 ?>
 
 <!-- ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT -->
@@ -8,16 +8,11 @@
 <!-- Site wrapper -->
 <div class="wrapper">
 <?php 
-  foreach ($user as $key) {
-    $nama = $key->nama;
-    $username = $key->username;
-    $level = $key->level_admin;
-    }
 
-  if ($level == "1") {
-     $this->load->view('layouts/header');
+  if (session()->get('level_admin') == "1") {
+     echo $this->include('layouts/header');
    } else{
-     $this->load->view('layouts/header_panitia');
+     echo $this->include('layouts/header_panitia');
    }
 ?>
 
@@ -30,20 +25,20 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<?php echo base_url(); ?>assets/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="<?= base_url(); ?>/assets/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           
-          <p><?php echo $nama; ?></p>
+          <p><?= session()->get('nama'); ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <?php
-      if ($level == "1") {
-         $this->load->view('layouts/sidebar_menu');
+      if (session()->get('level_admin') == "1") {
+         echo $this->include('layouts/sidebar_menu');
        } else{
-          $this->load->view('layouts/sidebar_panitia');
+          echo $this->include('layouts/sidebar_panitia');
        }
        ?>
     </section>
@@ -100,5 +95,5 @@
 <!-- ./wrapper -->
 
 <?php 
-  $this->load->view('layouts/foot');
+  echo $this->include('layouts/foot');
 ?>

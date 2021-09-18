@@ -1,7 +1,3 @@
-<?php foreach ($user as $key) {
-  $nama = $key->nama;
-  $username = $key->username;
-}?>
 <header class="main-header">
   <!-- Logo -->
   <a href="" class="logo">
@@ -25,25 +21,25 @@
         <!-- User Account: style can be found in dropdown.less -->
         <li class="dropdown user user-menu">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img src="<?php echo base_url(); ?>assets/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-            <span class="hidden-xs"><?php echo $nama; ?></span>
+            <img src="<?= base_url(); ?>/assets/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+            <span class="hidden-xs"><?= session()->get('nama'); ?></span>
           </a>
           <ul class="dropdown-menu">
             <!-- User image -->
             <li class="user-header">
-              <img src="<?php echo base_url(); ?>assets/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+              <img src="<?= base_url(); ?>/assets/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
               <p>
-                <?php echo $nama; ?>
-                <small><?php echo $username; ?></small>
+                <?= session()->get('nama'); ?>
+                <small><?= session()->get('username'); ?></small>
               </p>
             </li>
             <!-- Menu Footer-->
             <li class="user-footer">
               <div class="pull-left">
-                <a href="<?php echo base_url('admin/edit'); ?>" class="btn btn-primary btn-flat">Settings</a>
+                <a href="<?= base_url('admin/edit'); ?>" class="btn btn-primary btn-flat">Settings</a>
               </div>
               <div class="pull-right">
-                <a href="<?php echo base_url('admin/logout'); ?>"class="btn btn-danger btn-flat">Sign out</a>
+                <a href="<?= base_url('admin/logout'); ?>"class="btn btn-danger btn-flat">Sign out</a>
               </div>
             </li>
           </ul>

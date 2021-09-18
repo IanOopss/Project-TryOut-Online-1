@@ -45,7 +45,7 @@ class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = ['auth', 'url','form','the'];
+    protected $helpers = ['auth', 'url', 'form', 'the'];
 
     /**
      * Constructor.
@@ -56,8 +56,8 @@ class BaseController extends Controller
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
-
         // $this->session = \Config\Services::session();
+
         $this->encryption = \Config\Services::encrypter();
         session();
         
