@@ -9,7 +9,7 @@
 <div class="wrapper">
 <?php 
 
-  if (session()->get('level_admin') == "1") {
+  if (in_groups('super-admin')) {
      echo $this->include('layouts/header');
    } else{
      echo $this->include('layouts/header_panitia');
@@ -29,13 +29,13 @@
         </div>
         <div class="pull-left info">
           
-          <p><?= session()->get('nama'); ?></p>
+          <p><?= user()->username; ?></p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <?php
-      if (session()->get('level_admin') == "1") {
+      if (in_groups('super-admin')) {
          echo $this->include('layouts/sidebar_menu');
        } else{
           echo $this->include('layouts/sidebar_panitia');

@@ -12,8 +12,4 @@ class M_informasi extends Model {
 		'nama_kegiatan', 'tgl_pendaftaran', 'tgl_tutup', 
 		'tgl_ujian_cat', 'waktu_pengerjaan', 'alur_pendaftaran'
 	];
-
-	public function data_informasi(){
-		return $this->findAll();
-	}
 }

@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <?php echo $title; ?>
+        <?= $title; ?>
       </h1>
     </section>
 
@@ -16,16 +16,13 @@
             <div class="box-body">
               <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"><i class="fa fa-plus"></i> Add</button>
             </div>
-            <div class="box-footer">
-              <?php $this->load->view('layouts/notifikasi'); ?>
-            </div>
           </div>
 
           <?php include 'add.php';  ?>
           
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Tabel <?php echo $title; ?></h3>
+              <h3 class="box-title">Tabel <?= $title; ?></h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -43,20 +40,20 @@
                     <?php 
                       $no = 1;
                       foreach ($data_panitia as $key) {
-                        $id_admin = $key->id_admin;
+                        $id_admin = $key['id_admin'];
                      ?>
                   <tr>
-                    <td><?php echo $no; ?>.</td>
-                    <td><?php echo $key->nama; ?></td>
-                    <td><?php echo $key->username; ?></td>
-                    <td><?php echo $this->encryption->decrypt($key->password); ?></td>
+                    <td><?= $no; ?>.</td>
+                    <td><?= $key['nama']; ?></td>
+                    <td><?= $key['username']; ?></td>
+                    <td><?= $this->encryption->decrypt($key['password']); ?></td>
                     <td>
 
                       <a data-toggle="tooltip" data-placement="top" title="Edit">
-                      <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalEdit<?php echo $id_admin; ?>"><i class="fa fa-edit"></i></button>
+                      <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalEdit<?= $id_admin; ?>"><i class="fa fa-edit"></i></button>
                       </a>
                       
-                      <a href="<?php echo base_url('data_panitia/delete/'.$id_admin); ?>" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Hapus Data Panitia <?php echo $key->nama; ?> ?')">
+                      <a href="<?= base_url('data_panitia/delete/'.$id_admin); ?>" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Hapus Data Panitia <?= $key['nama']; ?> ?')">
                       <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
                       </a>
 

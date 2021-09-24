@@ -3,13 +3,6 @@ namespace App\Controllers;
 
 class Peserta extends BaseController
 {
-	public function __construct() {
-		if(!session()->get('id_peserta'))
-		{
-			return redirect()->to('AccessDenied');
-		}
-	}
-
 	public function index()
 	{
 		$data ['title'] 	= "Dashboard Peserta";
@@ -26,6 +19,10 @@ class Peserta extends BaseController
 		$data ['data_nilai'] 	= $this->nilai->findAll();
 
 		$this->load->view('v_peserta/v_app', $data);
+	}
+
+	public function test(){
+		dd('test');
 	}
 
 	public function logout()

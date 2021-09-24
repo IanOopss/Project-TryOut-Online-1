@@ -14,4 +14,8 @@ class M_admin extends Model {
 	{
 		return $this->where('username', $username)->first();
 	}
+
+	public function findPanitia(){
+		return $this->where('level_admin', 2)->findAll();
+	}
 }

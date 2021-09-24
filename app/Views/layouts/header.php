@@ -39,7 +39,7 @@
                 <a href="<?= base_url('admin/edit'); ?>" class="btn btn-primary btn-flat">Settings</a>
               </div>
               <div class="pull-right">
-                <a href="<?= base_url('admin/logout'); ?>"class="btn btn-danger btn-flat">Sign out</a>
+                <a href="<?= base_url('logout'); ?>"class="btn btn-danger btn-flat">Sign out</a>
               </div>
             </li>
           </ul>

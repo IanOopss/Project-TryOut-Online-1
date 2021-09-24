@@ -7,7 +7,7 @@ class Home extends BaseController
 	{
 		$data['title'] 	= "Home";
 		$data['page'] 		= "home";
-		$data['informasi'] 	= $this->informasi->data_informasi();
+		$data['informasi'] 	= $this->informasi->findAll();
 		
 		return view('v_home/home', $data);
 	}
@@ -16,7 +16,7 @@ class Home extends BaseController
 	{
 		$data ['title'] 			= "Formasi Asisten";
 		$data ['page'] 				= "formasi_asisten";
-		$data ['formasi_asisten'] 	= $this->lab->data_formasi_lab();
+		$data ['formasi_asisten'] 	= $this->lab->findAll();
 		
 		return view('v_home/pengumuman/formasi_asisten', $data);
 	}
@@ -25,7 +25,7 @@ class Home extends BaseController
 	{
 		$data ['title'] 	= "Alur Pendaftaran";
 		$data ['page'] 		= "alur_pendaftaran";
-		$data ['informasi'] = $this->informasi->data_informasi();
+		$data ['informasi'] = $this->informasi->findAll();
 		
 		return view('v_home/pengumuman/alur_pendaftaran', $data);
 	}
@@ -34,7 +34,7 @@ class Home extends BaseController
 	{
 		$data ['title'] 	= "Passing Grade";
 		$data ['page'] 		= "passing_grade";
-		$data ['jenis_soal'] = $this->soal->data_jenis_soal();
+		$data ['jenis_soal'] = $this->soal->findAll();
 		
 		return view('v_home/pengumuman/passing_grade', $data);
 	}

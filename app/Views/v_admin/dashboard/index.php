@@ -53,7 +53,7 @@
             <div class="inner">
               <h3><?= $soal; ?></h3>
 
-              <p>Junis Soal</p>
+              <p>Jenis Soal</p>
             </div>
             <div class="icon">
               <i class="ion ion-pie-graph"></i>

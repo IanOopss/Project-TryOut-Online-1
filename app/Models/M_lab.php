@@ -12,8 +12,4 @@ class M_lab extends Model {
 		'nama_lab', 'jumlah_formasi', 'jumlah_peserta', 
 		'jumlah_lulus_adm', 'lampiran'
 	];
-
-	public function data_formasi_lab(){
-		return $this->findAll();	
-	}
 }
