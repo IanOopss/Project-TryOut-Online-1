@@ -8,8 +8,8 @@ class Dashboard extends Admin
 {
 	public function index()
 	{
-		$data ['title'] 	= "Dashboard Admin";
-		$data ['page'] 		= "dashboard_admin";
+		$data['title'] 	= "Dashboard Admin";
+		$data['page'] 		= "dashboard_admin";
 		
 		$data['formasi_lab'] = $this->lab->findAll();
 		$data['jenis_soal'] = $this->soal->findAll();

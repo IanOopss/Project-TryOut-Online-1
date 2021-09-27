@@ -6,8 +6,9 @@ use App\Controllers\BaseController;
 
 class Admin extends BaseController
 {
-	public function index()
+	public function logout()
 	{
-		dd(session()->get('username'));
+		session()->destroy();
+		return redirect()->to('/');
 	}
 }

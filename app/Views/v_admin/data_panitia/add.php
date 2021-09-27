@@ -4,13 +4,13 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Form Input <?php echo $title; ?></h4>
+        <h4 class="modal-title">Form Input <?= $title; ?></h4>
       </div>
-      <?php echo form_open('data_panitia/input'); ?>
+      <?= form_open('Admin/DataPanitia/input'); ?>
         <div class="box-body">
           <div class="form-group">
             <label>Username</label>
-            <input type="text" name="username" maxlength="9" minlength="9" class="form-control" placeholder="Username" data-inputmask='"mask": "999999999"' data-mask required>
+            <input type="text" name="username" maxlength="9" minlength="9" class="form-control" placeholder="Username" data-inputmask='"mask": "999999999"' data-mask required autofocus>
           </div>
           <div class="form-group">
             <label>Nama Panitia</label>

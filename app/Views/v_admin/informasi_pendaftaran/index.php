@@ -52,7 +52,7 @@
                         if ($key['alur_pendaftaran'] == "") {
                           echo "Belum Diinput";
                         }else{
-                          echo "<a href='".base_url('formasi_lab/download/'.$key['alur_pendaftaran'])."'>
+                          echo "<a href='".base_url('/assets/academy/img/uploads/'.$key['alur_pendaftaran'])."' target='_blank'>
                                   <p align='center'><i class='fa fa-file'></i></p>
                                 </a>";
                         }

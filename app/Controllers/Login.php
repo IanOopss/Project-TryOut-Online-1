@@ -3,26 +3,11 @@ namespace App\Controllers;
 
 class Login extends BaseController
 {
-	// private function setUserSession($user)
-    // {
-    //     $data = [
-    //         'id' => $user['id'],
-    //         'name' => $user['name'],
-    //         'phone_no' => $user['phone_no'],
-    //         'email' => $user['email'],
-    //         'isLoggedIn' => true,
-    //         "role" => $user['role'],
-    //     ];
-
-    //     session()->set($data);
-    //     return true;
-    // }
-
 	public function index()
 	{
-		$data ['title'] 	= "Login Peserta";
-		$data ['page'] 		= "login_peserta";
-		$data ['informasi'] 	= $this->informasi->data_informasi();
+		$data['title'] 	= "Login Peserta";
+		$data['page'] 		= "login_peserta";
+		$data['informasi'] 	= $this->informasi->findAll();
 
 		return view('v_login/v_app', $data);
 	}
@@ -61,7 +46,7 @@ class Login extends BaseController
 		
 		}elseif($pass != $password){
 			session()->set_flashdata('warning', 'Maaf, Password Yang Anda Masukan Salah.');
-			redirect('login');;
+			redirect('login');
 		}elseif ($pass == $password) {
 
 			$cek_peserta = $this->peserta->cek_peserta($username);
@@ -84,7 +69,6 @@ class Login extends BaseController
 			redirect('peserta');
 
 		}else{
-
 			session()->set_flashdata('warning', 'Maaf, kombinasi username dan password salah.');
 			redirect('login');
 		}
@@ -94,7 +78,7 @@ class Login extends BaseController
 	{
 		$data ['title'] 	= "Login Panitia";
 		$data ['page'] 		= "login_panitia";
-		$data ['informasi'] 	= $this->informasi->data_informasi();
+		$data ['informasi'] 	= $this->informasi->findAll();
 		
         return view('v_login/v_app', $data);
 	}
@@ -156,7 +140,7 @@ class Login extends BaseController
 			session()->set($user_data);
 			
 			if ($level_admin == '1') {
-				return redirect()->to('admin');
+				return redirect()->to('Admin/Dashboard');
 			}elseif ($level_admin == '2') {
 				return redirect()->to('panitia');
 			}else{
