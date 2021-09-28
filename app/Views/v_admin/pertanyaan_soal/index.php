@@ -1,18 +1,14 @@
 <?php 
-foreach ($nama_soal as $nama) {
-  $id = $nama->id_soal;
-  $n_soal = $nama->nama_soal; 
-  $jml_soal = $nama->jumlah_soal;
-}
-
-
- ?>
- <!-- Content Wrapper. Contains page content -->
+  $id = $nama_soal['id_soal'];
+  $n_soal = $nama_soal['nama_soal'];
+  $jml_soal = $nama_soal['jumlah_soal'];
+?>
+<!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <?php echo $title." ".$n_soal; ?>
+        <?= $title." ".$n_soal; ?>
       </h1>
     </section>
 
@@ -25,19 +21,14 @@ foreach ($nama_soal as $nama) {
             <div class="box-body">
               <?php if ($data_pertanyaan >= 0 && $data_pertanyaan < $jml_soal): ?>
                 <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"><i class="fa fa-plus"></i> Add</button>
-              
               <?php else: ?>
                 <div class="callout callout-info">
-                  <h4>Penginputan <?php echo $title." ".$n_soal; ?> Sudah Selesai</h4>
+                  <h4>Penginputan <?= $title." ".$n_soal; ?> Sudah Selesai</h4>
 
-                  <p>Jumlah <?php echo $title." ".$n_soal." = ".$data_pertanyaan; ?>.</p>
+                  <p>Jumlah <?= $title." ".$n_soal." = ".$data_pertanyaan; ?>.</p>
                 </div>
               <?php endif; ?>
 
-            </div>
-            
-            <div class="box-footer">
-              <?php $this->load->view('layouts/notifikasi'); ?>
             </div>
           </div>
 

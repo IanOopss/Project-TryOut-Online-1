@@ -47,6 +47,7 @@ $routes->group("peserta", ["filter" => "accessGuard"], function ($routes) {
     $routes->get("/", "peserta::index");
 });
 
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

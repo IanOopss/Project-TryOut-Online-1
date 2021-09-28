@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <?php echo $title; ?>
+        <?= $title; ?>
       </h1>
     </section>
 
@@ -16,16 +16,13 @@
             <div class="box-body">
               <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"><i class="fa fa-plus"></i> Add</button>
             </div>
-            <div class="box-footer">
-              <?php $this->load->view('layouts/notifikasi'); ?>
-            </div>
           </div>
 
           <?php include 'add.php';  ?>
           
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Tabel <?php echo $title; ?></h3>
+              <h3 class="box-title">Tabel <?= $title; ?></h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -45,17 +42,17 @@
                     <?php 
                       $no = 1;
                       foreach ($formasi_lab as $key) {
-                        $id_lab = $key->id_lab;
+                        $id_lab = $key['id_lab'];
                      ?>
                   <tr>
-                    <td><?php echo $no; ?>.</td>
-                    <td><?php echo $key->nama_lab; ?></td>
-                    <td><?php echo $key->jumlah_formasi; ?></td>
-                    <td><?php echo $key->jumlah_peserta; ?></td>
-                    <td><?php echo $key->jumlah_lulus_adm; ?></td>
+                    <td><?= $no; ?>.</td>
+                    <td><?= $key['nama_lab']; ?></td>
+                    <td><?= $key['jumlah_formasi']; ?></td>
+                    <td><?= $key['jumlah_peserta']; ?></td>
+                    <td><?= $key['jumlah_lulus_adm']; ?></td>
                     <td>
                       <?php 
-                          echo "<a href='".base_url('formasi_lab/download/'.$key->lampiran)."'>
+                          echo "<a href='".base_url('/assets/academy/img/uploads/'.$key['lampiran'])."' target='_blank'>
                                   <p align='center'><i class='fa fa-file'></i></p>
                                 </a>";
                       ?>
@@ -63,11 +60,11 @@
                     <td>
 
                       <a data-toggle="tooltip" data-placement="top" title="Edit">
-                      <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalEdit<?php echo $id_lab; ?>"><i class="fa fa-edit"></i></button>
+                        <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalEdit<?= $id_lab; ?>"><i class="fa fa-edit"></i></button>
                       </a>
                       
-                      <a href="<?php echo base_url('formasi_lab/delete/'.$id_lab); ?>" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Hapus Formasi <?php echo $key->nama_lab; ?> ?')">
-                      <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
+                      <a href="<?= base_url('Admin/FormasiLab/deleteLab/'.$id_lab); ?>" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Hapus Formasi <?= $key['nama_lab']; ?> ?')">
+                        <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
                       </a>
 
                     </td>

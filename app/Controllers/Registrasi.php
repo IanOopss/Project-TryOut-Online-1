@@ -17,10 +17,10 @@ class Registrasi extends BaseController{
 
 	public function tahap_1()
 	{
-		$this->data ['title'] 	= "Registrasi Peserta Tahap 1";
-		$this->data ['judul'] 	= "Pembuatan Akun";
-		$this->data ['page'] 		= "tahap_1";
-		$this->data ['informasi'] 	= $this->informasi->data_informasi();
+		$this->data['title'] 	= "Registrasi Peserta Tahap 1";
+		$this->data['judul'] 	= "Pembuatan Akun";
+		$this->data['page'] 		= "tahap_1";
+		$this->data['informasi'] 	= $this->informasi->findAll();
 
 		return view('v_registrasi/v_app', $this->data);
 	}

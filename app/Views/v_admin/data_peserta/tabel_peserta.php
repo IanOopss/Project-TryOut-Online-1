@@ -1,6 +1,6 @@
 <script type="text/javascript">
 <?php 
-$link = site_url('data_peserta/ajax_get_peserta/'.$kode1);
+$link = site_url('Admin/DataPeserta/ajax_get_peserta/'.$kode1);
  ?>
   $(document).ready(function() {
 
@@ -12,7 +12,7 @@ $link = site_url('data_peserta/ajax_get_peserta/'.$kode1);
 
       // Load data for the table's content from an Ajax source
       "ajax": {
-        "url" : "<?php echo $link; ?>",
+        "url" : "<?= $link; ?>",
         "type"  : "POST"
       },
 

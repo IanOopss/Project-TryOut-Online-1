@@ -1,16 +1,12 @@
 <?php 
-foreach ($user as $key) {
-  $id_admin = $key->id_admin;
-  $password = $this->encryption->decrypt($key->password);
-}
-
+  $id_admin = session()->get('id_admin');
  ?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <?php echo $title; ?>
+        <?= $title; ?>
       </h1>
     </section>
 
@@ -25,17 +21,15 @@ foreach ($user as $key) {
               <h3 class="box-title">Settings Password</h3>
             </div>
 
-            <?php $this->load->view('layouts/notifikasi'); ?>
-
             <!-- /.box-header -->
             <!-- form start -->
-            <?php echo form_open('panitia/edit_password/'.$id_admin, 'class="form-horizontal"'); ?>
+            <?= form_open('panitia/edit_password/'.$id_admin, 'class="form-horizontal"'); ?>
               <div class="box-body">
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">Password</label>
 
                   <div class="col-sm-8">
-                    <input type="password"class="form-control" id="password" name="password" value="<?php echo $password; ?>" placeholder="Password" readonly>
+                    <input type="password"class="form-control" id="password" name="password" value="<?= $password; ?>" placeholder="Password" readonly>
                   </div>
                   <div class="col-md-2 ">
                     <input type="checkbox" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'"> Tampilkan

@@ -12,7 +12,7 @@ class AccessGuard implements FilterInterface
         if (session()->get('isLoggedIn')) {
 
 			if (session()->get('level_admin') == "1") {
-				return redirect()->to('admin');
+				return redirect()->to('Admin/Dashboard');
 			}
 
 			if (session()->get('level_admin') == "3") {

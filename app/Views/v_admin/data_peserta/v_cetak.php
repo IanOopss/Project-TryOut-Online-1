@@ -1,10 +1,8 @@
 <?php 
 
-foreach ($cek_lab as $lab) {
-	$nama_lab = $lab->nama_lab;
-}
+$nama_lab = $cek_lab['nama_lab'];
 
-$pdf = new pdf('P','mm','A4');
+$pdf = new \FPDF('P','mm','A4');
 
 $pdf->AddPage();
 
@@ -26,13 +24,12 @@ $pdf->SetFont('Arial','',10);
 $no = 1;
 foreach ($cetak_peserta as $row){
     $pdf->Cell(20,6,$no,1,0);
-    $pdf->Cell(35,6,$row->nim,1,0);
-    $pdf->Cell(85,6,$row->nama_peserta,1,0);
-    $pdf->Cell(25,6,$row->ipk,1,1); 
+    $pdf->Cell(35,6,$row['nim'],1,0);
+    $pdf->Cell(85,6,$row['nama_peserta'],1,0);
+    $pdf->Cell(25,6,$row['ipk'],1,1); 
     $no++;
 }
 
 $pdf->Output($nama_lab.'.pdf','D');
-            
- ?>
+?>
 

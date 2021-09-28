@@ -6,11 +6,12 @@
           <span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Form Input Data Laboratorium</h4>
       </div>
-      <?php echo form_open_multipart('formasi_lab/input'); ?>
+      <?= form_open_multipart('Admin/FormasiLab/inputLab'); ?>
+      <?= csrf_field() ;?>
         <div class="box-body">
           <div class="form-group">
             <label>Nama Laboratorium</label>
-            <input type="text" name="nama_lab" class="form-control" placeholder="Nama Laboratorium" required>
+            <input type="text" name="nama_lab" class="form-control" placeholder="Nama Laboratorium" required autofocus>
           </div>
           <div class="form-group">
             <label>Jumlah Formasi</label>

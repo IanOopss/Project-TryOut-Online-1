@@ -39,7 +39,7 @@ class DataPanitia extends Admin
 		return redirect()->to('Admin/DataPanitia');
 	}
 
-	public function edit($id_admin)
+	public function editPanitia($id)
 	{
 		$nama = ucwords($this->request->getVar('nama'));
 
@@ -47,14 +47,14 @@ class DataPanitia extends Admin
 			'nama' => $nama,
 		];
 		
-		$this->admin->update($id_admin, $data);
+		$this->admin->update($id, $data);
 
 		return redirect()->to('Admin/DataPanitia');
 	}
 
-	public function delete($id_admin)
+	public function deletePanitia($id)
 	{
-		$this->admin->delete($id_admin);
+		$this->admin->delete($id);
 		return redirect()->to('Admin/DataPanitia');
 	}
 }

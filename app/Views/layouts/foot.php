@@ -29,7 +29,6 @@
 <!-- AdminLTE for demo purposes -->
 <script src="<?= base_url(); ?>/assets/adminlte/dist/js/demo.js"></script>
 
-
 <script>
   $(function () {
     $('#example1').DataTable()
@@ -97,11 +96,11 @@
 <!-- Datatables -->
     <?php 
         if ($page == 'pertanyaan_soal') {
-            $this->load->view('v_admin/pertanyaan_soal/tabel_pertanyaan');
+          echo $this->include('v_admin/pertanyaan_soal/tabel_pertanyaan');
         }elseif ($page == 'data_peserta') {
-            $this->load->view('v_admin/data_peserta/tabel_peserta');
+          echo $this->include('v_admin/data_peserta/tabel_peserta');
         }elseif ($page == 'ujian_cat') {
-            $this->load->view('v_peserta/ujian_cat/script');
+          echo $this->include('v_peserta/ujian_cat/script');
         }
      ?>
 

@@ -1,6 +1,6 @@
 <?php
 
-require_once APPPATH . '/third_party/fpdf/fpdf.php';
+require_once APPPATH . '/ThirdParty/fpdf/fpdf.php';
 
 class pdf extends FPDF{
 

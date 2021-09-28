@@ -1,4 +1,4 @@
-<div class="modal fade" id="myModalEdit<?php echo $id_soal; ?>">
+<div class="modal fade" id="myModalEdit<?= $id_soal; ?>">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -6,19 +6,19 @@
           <span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Form Edit Jenis Soal</h4>
       </div>
-     <?php echo form_open('jenis_soal/edit/'.$id_soal); ?>
+     <?= form_open('Admin/JenisSoal/editSoal/'.$id_soal); ?>
         <div class="box-body">
           <div class="form-group">
             <label>Nama Soal</label>
-            <input type="text" name="nama_soal" value="<?php echo $jso->nama_soal; ?>" class="form-control" placeholder="Nama Soal" required>
+            <input type="text" name="nama_soal" value="<?= $jso['nama_soal'] ?>" class="form-control" placeholder="Nama Soal" required>
           </div>
           <div class="form-group">
             <label>Jumlah Soal</label>
-            <input type="text" name="jumlah_soal" value="<?php echo $jso->jumlah_soal; ?>" class="form-control" data-inputmask='"mask": "99"' data-mask required>
+            <input type="text" name="jumlah_soal" value="<?= $jso['jumlah_soal'] ?>" class="form-control" data-inputmask='"mask": "99"' data-mask required>
           </div>
           <div class="form-group">
             <label>Jumlah Soal Minimal Benar</label>
-            <input type="text" name="minimal_benar" value="<?php echo $jso->minimal_benar; ?>" class="form-control" data-inputmask='"mask": "99"' data-mask required>
+            <input type="text" name="minimal_benar" value="<?= $jso['minimal_benar'] ?>" class="form-control" data-inputmask='"mask": "99"' data-mask required>
           </div>
         </div>
       <div class="modal-footer">

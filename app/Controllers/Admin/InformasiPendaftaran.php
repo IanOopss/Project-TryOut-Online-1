@@ -18,7 +18,7 @@ class InformasiPendaftaran extends Admin
 		return view('v_admin/v_app', $data);
 	}
 
-	public function edit($id_informasi)
+	public function editInformasi($id)
 	{
 		$nama_kegiatan		= $this->request->getVar('nama_kegiatan');
 		$tgl_pendaftaran 	= explode(" - ", $this->request->getVar('tgl_pendaftaran'));
@@ -32,14 +32,14 @@ class InformasiPendaftaran extends Admin
 		$tgl1 = ubah_tgl($tgl_pendaftaran[0]);
 		$tgl2 = ubah_tgl($tgl_pendaftaran[1]);
 		
-		if ($img->getError() == 4) {
+		if($img->getError() == 4) {
 			$gambar_alur = $old_img;
 		} else{
 			$gambar_alur = $img->getRandomName();
 
 			unlink('assets/academy/img/uploads/' .$old_img);
 
-			$img->move('assets/academy/img/uploads/');
+			$img->move('assets/academy/img/uploads/', $gambar_alur);
 		}
 		
 		$data= [
@@ -51,8 +51,8 @@ class InformasiPendaftaran extends Admin
 			'waktu_pengerjaan' => $waktu_pengerjaan,
 			'alur_pendaftaran' => $gambar_alur,
 		];
-
-		$this->post->update($id_informasi, $data);
+		
+		$this->informasi->update($id, $data);
 
 		return redirect()->to('Admin/InformasiPendaftaran');
 	}

@@ -1,28 +1,23 @@
-
 <ul class="sidebar-menu" data-widget="tree">
-
-  <li id="clock" class="header"><?php print date('H:i:s'); ?></li>
-
-  <li class="header"><?php echo waktu(); ?></li>
 
   <li class="header">MAIN NAVIGATION</li>
 
   <li class="<?php if ($page == 'dashboard_panitia') echo "treeview active";  ?>">
-    <a href="<?php echo base_url('panitia'); ?>">
+    <a href="<?= base_url('panitia'); ?>">
       <i class="fa fa-dashboard"></i> 
       <span>Dashboard</span>
     </a>
   </li>
 
   <li class="<?php if ($page == 'formasi_lab') echo "treeview active";  ?>">
-    <a href="<?php echo base_url('formasi_lab'); ?>">
+    <a href="<?= base_url('Admin/FormasiLab'); ?>">
       <i class="fa fa-university"></i>
       <span>Formasi Lab</span>
     </a>
   </li>
 
   <li class="<?php if ($page == 'jenis_soal') echo "treeview active";  ?>">
-    <a href="<?php echo base_url('jenis_soal'); ?>">
+    <a href="<?= base_url('Admin/JenisSoal'); ?>">
       <i class="fa fa-files-o"></i>
       <span>Jenis Soal</span>
     </a>
@@ -37,10 +32,8 @@
       </span>
     </a>
     <ul class="treeview-menu">
-      <?php foreach ($jenis_soal as $key) {
-        # code...
-      ?>
-      <li><a href="<?php echo base_url('pertanyaan_soal/soal/'.$key->id_soal); ?>"><i class="fa fa-circle-o"></i> <?php echo $key->nama_soal; ?></a></li>
+      <?php foreach ($jenis_soal as $key) { ?>
+      <li><a href="<?= base_url('Admin/PertanyaanSoal/soal/'.$key['id_soal']); ?>"><i class="fa fa-circle-o"></i> <?= $key['nama_soal']; ?></a></li>
     <?php 
     } 
     ?>
@@ -56,10 +49,8 @@
       </span>
     </a>
     <ul class="treeview-menu">
-      <?php foreach ($formasi_lab as $lab) {
-        # code...
-       ?>
-      <li><a href="<?php echo base_url('data_peserta/formasi/'.$lab->id_lab); ?>"><i class="fa fa-circle-o"></i> <?php echo $lab->nama_lab; ?></a></li>
+      <?php foreach ($formasi_lab as $lab) { ?>
+      <li><a href="<?= base_url('Admin/DataPeserta/formasi/'.$lab['id_lab']); ?>"><i class="fa fa-circle-o"></i> <?= $lab['nama_lab']; ?></a></li>
       <?php } ?>
     </ul>
   </li>
@@ -73,10 +64,8 @@
       </span>
     </a>
     <ul class="treeview-menu">
-      <?php foreach ($formasi_lab as $lab) {
-        # code...
-       ?>
-      <li><a href="<?php echo base_url('data_nilai/formasi/'.$lab->id_lab); ?>"><i class="fa fa-circle-o"></i> <?php echo $lab->nama_lab; ?></a></li>
+      <?php foreach ($formasi_lab as $lab) { ?>
+      <li><a href="<?= base_url('Admin/DataNilai/formasi/'.$lab['id_lab']); ?>"><i class="fa fa-circle-o"></i> <?= $lab['nama_lab']; ?></a></li>
       <?php } ?>
     </ul>
   </li>

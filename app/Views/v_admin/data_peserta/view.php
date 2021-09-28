@@ -1,20 +1,13 @@
 <?php 
-foreach ($cek_lab as $formasi) {
-  $nama_lab = $formasi->nama_lab;
-}
-
-foreach ($view_peserta as $view) {
-  
-}
-
- ?>
- <!-- Content Wrapper. Contains page content -->
+  $nama_lab = $cek_lab['nama_lab'];
+?>
+<!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <?php echo $title." Formasi ".$nama_lab; ?>
+        <?= $title." Formasi ".$nama_lab; ?>
       </h1>
     </section>
 
@@ -36,22 +29,22 @@ foreach ($view_peserta as $view) {
                     <!-- Add the bg color to the header using any of the bg-* classes -->
                     <div class="widget-user-header bg-aqua-active">
                       <div class="widget-user-image">
-                        <img src="<?php echo base_url('uploads/berkas_peserta/'.$view->foto); ?>" alt="">
+                        <img src="<?= base_url('assets/academy/img/uploads/berkas_peserta/'.$view_peserta['foto']); ?>" alt="">
                       </div>
                       <!-- /.widget-user-image -->
-                      <h3 class="widget-user-username"><?php echo $view->nama_peserta; ?></h3>
-                      <h5 class="widget-user-desc"><?php echo $view->tmp_lahir.", ".tgl_indonesia($view->tgl_lahir) ; ?></h5>
+                      <h3 class="widget-user-username"><?= $view_peserta['nama_peserta']; ?></h3>
+                      <h5 class="widget-user-desc"><?= $view_peserta['tmp_lahir'].", ".tgl_indonesia($view_peserta['tgl_lahir']) ; ?></h5>
                     </div>
                     <div class="box-footer no-padding">
                       <ul class="nav nav-stacked">
-                        <li><a href="#"><?php echo $view->ipk; ?></a></li>
-                        <li><a href="#"><?php echo $view->jenis_kelamin; ?></a></li>
-                        <li><a href="#"><?php echo $view->agama; ?></a></li>
-                        <li><a href="#"><?php echo $view->no_hp; ?></a></li>
-                        <li><a href="#"><?php echo $view->email; ?></a></li>
-                        <li><a href="#">Tanggal Pendaftan <span class="pull-right badge bg-aqua"><?php echo tgl_indonesia($view->tgl_selesai_pendaftaran); ?></span></a></li>
-                        <li><a href="#">Status Pendaftaran <span class="pull-right badge bg-green"><?php echo $view->status_pendaftaran; ?></span></a></li>
-                        <li><a href="#">Status Verifikasi <span class="pull-right badge bg-red"><?php echo $view->status_verifikasi; ?></span></a></li>
+                        <li><a href="#"><?= $view_peserta['ipk']; ?></a></li>
+                        <li><a href="#"><?= $view_peserta['jenis_kelamin']; ?></a></li>
+                        <li><a href="#"><?= $view_peserta['agama']; ?></a></li>
+                        <li><a href="#"><?= $view_peserta['no_hp']; ?></a></li>
+                        <li><a href="#"><?= $view_peserta['email']; ?></a></li>
+                        <li><a href="#">Tanggal Pendaftan <span class="pull-right badge bg-aqua"><?= tgl_indonesia($view_peserta['tgl_selesai_pendaftaran']); ?></span></a></li>
+                        <li><a href="#">Status Pendaftaran <span class="pull-right badge bg-green"><?= $view_peserta['status_pendaftaran']; ?></span></a></li>
+                        <li><a href="#">Status Verifikasi <span class="pull-right badge bg-green"><?= $view_peserta['status_verifikasi']; ?></span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -59,7 +52,6 @@ foreach ($view_peserta as $view) {
                 </div>
               </div>
             </div>
-
             <div class="modal-footer">
               <button type="button" class="btn btn-danger" onclick="window.history.back();">Back</button>
             </div>

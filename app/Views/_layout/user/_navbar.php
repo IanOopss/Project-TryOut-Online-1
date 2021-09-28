@@ -38,7 +38,7 @@
                                 </div>
                             </li>
                             <li><a href="<?= base_url('home/about_us'); ?>">About Us</a></li>
-                            <li><a href="<?= base_url('register'); ?>">Registrasi</a></li>
+                            <li><a href="<?= base_url('registrasi'); ?>">Registrasi</a></li>
                             <li><a href="<?= base_url('login'); ?>">Login</a></li>
                         </ul>
                     </div>

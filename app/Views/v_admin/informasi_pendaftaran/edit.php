@@ -6,8 +6,8 @@
           <span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Form Edit Informasi</h4>
       </div>
-      <?= form_open_multipart('Admin/InformasiPendaftaran/edit/'.$id_informasi); ?>
-
+      <?= form_open_multipart('Admin/InformasiPendaftaran/editInformasi/'.$id_informasi); ?>
+      <?= csrf_field() ;?>
         <?php 
             $tgl1 = ubah_tgl2($key['tgl_pendaftaran']);
             $tgl2 = ubah_tgl2($key['tgl_tutup']);
@@ -16,7 +16,7 @@
             $tgl5 = ubah_tgl2($key['tgl_ujian_cat']);
          ?>
         <div class="box-body">
-          <input type="text" name="old_img" value="<?= $key['alur_pendaftaran']; ?>">
+          <input type="hidden" name="old_img" value="<?= $key['alur_pendaftaran']; ?>">
           <div class="form-group">
             <label>Nama Kegiatan</label>
             <input type="text" name="nama_kegiatan" value="<?= $key['nama_kegiatan']; ?>" class="form-control" placeholder="Nama Kegiatan" autocomplete required>

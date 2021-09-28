@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <?php echo $title; ?>
+        <?= $title; ?>
       </h1>
     </section>
 
@@ -15,9 +15,6 @@
           <div class="box box-primary">
             <div class="box-body">
               <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#modal-default"><i class="fa fa-plus"></i> Add</button>
-            </div>
-            <div class="box-footer">
-              <?php $this->load->view('layouts/notifikasi'); ?>
             </div>
           </div>
 
@@ -45,24 +42,24 @@
                     <?php 
                       $no = 1;
                       foreach ($jenis_soal as $jso) {
-                        $id_soal = $jso->id_soal;
+                        $id_soal = $jso['id_soal'];
                      ?>
                   <tr>
-                    <td><?php echo $no; ?>.</td>
-                    <td><?php echo $jso->nama_soal; ?></td>
-                    <td><?php echo $jso->jumlah_soal; ?></td>
-                    <td><?php echo $jso->minimal_benar; ?></td>
-                    <td><?php echo $jso->total_nilai; ?></td>
-                    <td><?php echo $jso->passing_grade; ?></td>
+                    <td><?= $no; ?>.</td>
+                    <td><?= $jso['nama_soal']; ?></td>
+                    <td><?= $jso['jumlah_soal']; ?></td>
+                    <td><?= $jso['minimal_benar']; ?></td>
+                    <td><?= $jso['total_nilai']; ?></td>
+                    <td><?= $jso['passing_grade']; ?></td>
                     </td>
                     <td>
 
                       <a data-toggle="tooltip" data-placement="top" title="Edit">
-                      <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalEdit<?php echo $id_soal; ?>"><i class="fa fa-edit"></i></button>
+                        <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalEdit<?= $id_soal; ?>"><i class="fa fa-edit"></i></button>
                       </a>
                       
-                      <a href="<?php echo base_url('jenis_soal/delete/'.$id_soal); ?>" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Hapus <?php echo $jso->nama_soal; ?> ?')">
-                      <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
+                      <a href="<?= base_url('Admin/JenisSoal/deleteSoal/'.$id_soal); ?>" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Hapus <?= $jso['nama_soal']; ?> ?')">
+                        <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
                       </a>
 
                     </td>

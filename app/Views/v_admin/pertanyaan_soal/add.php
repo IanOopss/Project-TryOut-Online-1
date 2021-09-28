@@ -4,9 +4,10 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Form Input Pertanyaan Soal <?php echo $n_soal; ?> </h4>
+        <h4 class="modal-title">Form Input Pertanyaan Soal <?= $n_soal; ?> </h4>
       </div>
-      <?php echo form_open('pertanyaan_soal/input/'.$id); ?>
+      <?= form_open('Admin/PertanyaanSoal/inputSoal/'.$id); ?>
+      <?= csrf_field() ;?>
         <div class="box-body">
           <div class="form-group">
             <label>Pertanyaan</label>

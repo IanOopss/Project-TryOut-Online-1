@@ -49,7 +49,7 @@
                       <a data-toggle="tooltip" data-placement="top" title="Edit">
                       <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalEdit<?= $id_admin; ?>"><i class="fa fa-edit"></i></button>
                       </a>
-                      <a href="<?= base_url('DataPanitia/delete/'.$id_admin); ?>" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Hapus Data Panitia <?= $key['nama']; ?> ?')">
+                      <a href="<?= base_url('Admin/DataPanitia/deletePanitia/'.$id_admin); ?>" data-toggle="tooltip" data-placement="top" title="Delete" onclick="return confirm('Hapus Data Panitia <?= $key['nama']; ?> ?')">
                       <button type="button" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i></button>
                       </a>
 

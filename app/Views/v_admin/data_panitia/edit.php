@@ -6,7 +6,8 @@
           <span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Form Edit <?= $title; ?></h4>
       </div>
-      <?= form_open('Admin/DataPanitia/edit/'.$id_admin); ?>
+      <?= form_open('Admin/DataPanitia/editPanitia/'.$id_admin); ?>
+      <?= csrf_field() ;?>
         <div class="box-body">
           <div class="form-group">
             <label>Username</label>

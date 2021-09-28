@@ -7,6 +7,7 @@
         <h4 class="modal-title">Form Input <?= $title; ?></h4>
       </div>
       <?= form_open('Admin/DataPanitia/input'); ?>
+      <?= csrf_field() ;?>
         <div class="box-body">
           <div class="form-group">
             <label>Username</label>

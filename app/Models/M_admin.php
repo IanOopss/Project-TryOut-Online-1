@@ -6,9 +6,10 @@ use CodeIgniter\Model;
 
 class M_admin extends Model {
 
-	protected $table      = 'tbl_admin';
-    protected $returnType     = 'array';
-    protected $allowedFields = ['username', 'password', 'level_admin', 'nama'];
+	protected $table      		= 'tbl_admin';
+    protected $returnType    	= 'array';
+	protected $primaryKey 		= 'id_admin';
+    protected $allowedFields 	= ['username', 'password', 'level_admin', 'nama'];
 	
 	public function cek_panitia($username)
 	{

@@ -1,15 +1,13 @@
 <?php 
-foreach ($cek_lab as $formasi) {
-  $id_lab = $formasi->id_lab;
-  $nama_lab = $formasi->nama_lab;
-}
- ?>
- <!-- Content Wrapper. Contains page content -->
+  $id_lab = $cek_lab['id_lab'];
+  $nama_lab = $cek_lab['nama_lab'];
+?>
+<!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <?php echo $title." Formasi ".$nama_lab; ?>
+        <?= $title." Formasi ".$nama_lab; ?>
       </h1>
     </section>
 
@@ -27,18 +25,15 @@ foreach ($cek_lab as $formasi) {
                   <span class="sr-only">Toggle Dropdown</span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                  <li><a href="<?php echo base_url('data_peserta/cetak/'.$id_lab); ?>">Lulus Verifikasi</a></li>
+                  <li><a href="<?= base_url('Admin/DataPeserta/cetak/'.$id_lab); ?>">Lulus Verifikasi</a></li>
                 </ul>
               </div>
-            </div>
-            <div class="box-footer">
-              <?php $this->load->view('layouts/notifikasi'); ?>
             </div>
           </div>
           
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Tabel <?php echo $title." Formasi ".$nama_lab; ?> </h3>
+              <h3 class="box-title">Tabel <?= $title." Formasi ".$nama_lab; ?> </h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">

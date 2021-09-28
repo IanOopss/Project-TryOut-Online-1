@@ -6,7 +6,8 @@
           <span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Form Input Jenis Soal</h4>
       </div>
-      <?php echo form_open('jenis_soal/input'); ?>
+      <?= form_open('Admin/JenisSoal/inputSoal'); ?>
+      <?= csrf_field() ;?>
         <div class="box-body">
           <div class="form-group">
             <label>Nama Soal</label>

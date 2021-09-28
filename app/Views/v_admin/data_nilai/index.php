@@ -1,15 +1,13 @@
 <?php 
-foreach ($cek_lab as $formasi) {
-  $id_lab = $formasi->id_lab;
-  $nama_lab = $formasi->nama_lab;
-}
- ?>
- <!-- Content Wrapper. Contains page content -->
+  $id_lab = $cek_lab['id_lab'];
+  $nama_lab = $cek_lab['nama_lab'];
+?>
+<!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <?php echo $title." Formasi ".$nama_lab; ?>
+        <?= $title." Formasi ".$nama_lab; ?>
       </h1>
     </section>
 
@@ -20,7 +18,7 @@ foreach ($cek_lab as $formasi) {
           
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Tabel <?php echo $title." Formasi ".$nama_lab; ?></h3>
+              <h3 class="box-title">Tabel <?= $title." Formasi ".$nama_lab; ?></h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -31,8 +29,8 @@ foreach ($cek_lab as $formasi) {
                     <th>Nama Peserta</th>
                     <?php 
                       foreach ($jenis_soal as $jen) {
-                        $id_soal = $jen->id_soal;
-                        echo "<th>".$jen->nama_soal."</th>";
+                        $id_soal = $jen['id_soal'];
+                        echo "<th>".$jen['nama_soal']."</th>";
                       }
                      ?>
                   </tr>
@@ -42,19 +40,15 @@ foreach ($cek_lab as $formasi) {
                       $no = 1;
 
                       foreach ($data_nilai as $nilai) {
-                        $id_peserta = $nilai->id_peserta;
+                        $id_peserta = $nilai['id_peserta'];
                         echo "<tr>";
                         echo "<td>".$no."</td>";
-                        echo "<td>".$nilai->nama_peserta."</td>";
+                        echo "<td>".$nilai['nama_peserta']."</td>";
                         
-                        //Nilai
-                        $this->db->select('*');
-                        $this->db->from('tbl_nilai');
-                        $this->db->where('id_peserta', $id_peserta);
-                        $this->db->order_by('id_soal', 'ASC');
-                        $hasil = $this->db->get()->result();
                         foreach ($hasil as $hsl) {
-                          echo "<td>".$hsl->nilai_peserta."</td>";
+                          if($hsl['id_peserta'] == $id_peserta){
+                            echo "<td>".$hsl['nilai_peserta']."</td>";
+                          }
                         }
                         echo "</tr>";
                       $no++;
