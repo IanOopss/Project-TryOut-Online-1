@@ -72,18 +72,20 @@ class Registrasi extends BaseController{
 		
 		//Cek Pendaftaran Peserta
 		$cek_pendaftaran = $this->peserta->cek_peserta($nim);
+		
 		if($cek_pendaftaran != NULL){
-			$password_peserta = $this->encryption->decrypt($cek_pendaftaran['password_peserta']);
+			$password_peserta = password_verify($password, $cek_pendaftaran['password_peserta']);
 			$status_pendaftaran = $cek_pendaftaran['status_pendaftaran'];
 
 			if ($password_peserta != $password) {
+
 				$this->session->set_flashdata('warning', 'Password Yang Anda Masukan Salah.');
 				return redirect()->to('registrasi/tahap_1');
 			}
 			// Tahap 2 Selesai
 			elseif ($status_pendaftaran == "Belum Selesai") {
 				$this->session->set_flashdata('success', 'Data Diodata '.$nim.' Berhasil Disimpan. <br> Silakan Upload Berkas Lamaran!');
-				return redirect()->to('registrasi/tahap_3/'.$nim);
+				return redirect()->to('registrasi/tahap_3?nim='.$nim);
 			}
 			// Tahap 3 Selesai
 			elseif ($status_pendaftaran == "Selesai"){
@@ -91,12 +93,12 @@ class Registrasi extends BaseController{
 			}
 			// Tahap 2 Belum Selesai
 			else{
-				return redirect()->to('registrasi/tahap_2/'.$nim);
+				return redirect()->to('registrasi/tahap_2?nim='.$nim);
 			}
 		} else{
 			$this->peserta->insert([
 				'nim' => $nim,
-				'password_peserta' => $this->encryption->encrypt($password),
+				'password_peserta' => password_hash($password, PASSWORD_ARGON2I),
 			]);
 
 			//pesan yang ditampilkan apabila input success
@@ -111,11 +113,11 @@ class Registrasi extends BaseController{
 	{	
 		$nim = $this->request->getVar('nim');
 
-		$this->data ['title'] 	= "Registrasi Peserta Tahap 2";
-		$this->data ['judul'] 	= "Pengisian Biodata";
-		$this->data ['page'] 		= "tahap_2";
+		$this->data['title'] 	= "Registrasi Peserta Tahap 2";
+		$this->data['judul'] 	= "Pengisian Biodata";
+		$this->data['page'] 		= "tahap_2";
 
-		$this->data ['data_peserta'] 	= $this->peserta->cek_peserta($nim);
+		$this->data['data_peserta'] 	= $this->peserta->cek_peserta($nim);
 
 		return view('v_registrasi/v_app', $this->data);
 	}
@@ -130,59 +132,40 @@ class Registrasi extends BaseController{
 		$no_hp 			= $this->request->getVar('no_hp');
 		$email 			= $this->request->getVar('email');
 		$agama 			= $this->request->getVar('agama');
+		$foto 			= $this->request->getFile('foto');
 
 		$status_pendaftaran = "Belum Selesai";
 
-		$config['upload_path']          = './uploads/berkas_peserta/';
-		$config['allowed_types']        = 'jpg';
-		$config['max_size']             = 256;
-		$config['max_width']            = 354;
-        $config['max_height']           = 472;
+		$nama_img = $foto->getRandomName();
+		$foto->move('assets/academy/img/uploads/berkas_peserta', $nama_img);
 
-        $this->upload->initialize($config);
+		$this->data = [
+			'nama_peserta' => $nama_peserta,
+			'ipk' => $ipk,
+			'tmp_lahir' => $tmp_lahir ,
+			'tgl_lahir' => $tgl_lahir,
+			'jenis_kelamin' => $jenis_kelamin,
+			'no_hp' => $no_hp,
+			'email' => $email,
+			'agama' => $agama,
+			'status_pendaftaran' => $status_pendaftaran,
+			'foto' => $nama_img
+		];
 
-        if (!$this->upload->do_upload('foto')){
-	                    
-	        $error = $this->upload->display_errors();
-	        $this->session->set_flashdata('warning', $error);
-	        return redirect()->to('registrasi/tahap_2/'.$nim);
-	        
-	    }else{
-
-	    	$foto = $this->upload->data('file_name');
-	    	$this->data = [
-				'nama_peserta' => $nama_peserta,
-				'ipk' => $ipk,
-				'tmp_lahir' => $tmp_lahir ,
-				'tgl_lahir' => $tgl_lahir,
-				'jenis_kelamin' => $jenis_kelamin,
-				'no_hp' => $no_hp,
-		 		'email' => $email,
-		 		'agama' => $agama,
-		 		'status_pendaftaran' => $status_pendaftaran,
-		 		'foto' => $foto
-			];
-
-			$simpan = $this->peserta->update_paserta($this->data, $id_peserta);
-			if (!$simpan) {
-				$this->session->set_flashdata('success', 'Data Diodata '.$nim.' Berhasil Disimpan. <br> Silakan Upload Berkas Lamaran!');
-			} else{
-				$this->session->set_flashdata('warning', 'Data Gagal Disimpan');
-			}
-			return redirect()->to('registrasi/tahap_3/'.$nim);
-	    }
-
+		$this->peserta->update($id_peserta, $this->data);
+		
+		return redirect()->to('registrasi/tahap_3?nim='.$nim);
 	}
 
-	public function tahap_3($nim)
+	public function tahap_3()
 	{	
-		$this->data ['title'] 	= "Registrasi Peserta Tahap 3";
-		$this->data ['judul'] 	= "Upload Berkas";
-		$this->data ['page'] 		= "tahap_3";
+		$this->data['title'] 	= "Registrasi Peserta Tahap 3";
+		$this->data['judul'] 	= "Upload Berkas";
+		$this->data['page'] 		= "tahap_3";
 
-		$this->data ['data_peserta'] 	= $this->peserta->cek_peserta($nim)->result();
-		$this->data ['formasi_lab'] = $this->M_formasi_lab->data_formasi_lab()->result();
-
+		$this->data['data_peserta'] 	= $this->peserta->cek_peserta($this->request->getVar('nim'));
+		$this->data['formasi_lab'] = $this->lab->findAll();
+		
 		return view('v_registrasi/v_app', $this->data);
 	}
 
@@ -190,55 +173,41 @@ class Registrasi extends BaseController{
 	{
 		$id_lab = $this->request->getVar('id_lab');
 		$tgl_selesai_pendaftaran = date('Y-m-d');
+		$berkas = $this->request->getFile('berkas_peserta');
+
 		$status_pendaftaran = "Selesai";
-
 		//Cek Jumlah Peserta Formasi Pada Lab
-		$cek_formasi = $this->M_formasi_lab->cek_formasi_lab($id_lab)->result();
-		foreach ($cek_formasi as $key) {
-			$jumlah_peserta = $key->jumlah_peserta;
-		}
+		$cek_formasi = $this->lab->where('id_lab', $id_lab)->first();
+	
+		$jumlah_peserta = $cek_formasi['jumlah_peserta'];
+		$nama_berkas = $berkas->getRandomName();
+		$berkas->move('assets/academy/img/uploads/berkas_peserta', $nama_berkas);
 
-		$config['upload_path']          = './uploads/berkas_peserta/';
-		$config['allowed_types']        = 'pdf';
-		$config['max_size']             = 2048;
+		$this->data = [
+			'id_lab' => $id_lab,
+			'tgl_selesai_pendaftaran' => $tgl_selesai_pendaftaran,
+			'status_pendaftaran' => $status_pendaftaran,
+			'berkas_peserta' => $nama_berkas,
+		];
 
-		$this->upload->initialize($config);
+		$this->data_lab = [
+			'jumlah_peserta' => $jumlah_peserta + 1
+		];
 
-		if ( ! $this->upload->do_upload('berkas_peserta')){
-	                    
-	        $error = $this->upload->display_errors();
-	        $this->session->set_flashdata('warning', $error);
-	        return redirect()->to('registrasi/tahap_3/'.$nim);
-	        
-	    }else{ 
+		$this->lab->update($id_lab, $this->data_lab);
+		$this->peserta->update($id_peserta, $this->data);
 
-	    	$berkas_peserta = $this->upload->data('file_name');
-
-	    	$this->data = [
-				'id_lab' => $id_lab,
-				'tgl_selesai_pendaftaran' => $tgl_selesai_pendaftaran,
-				'status_pendaftaran' => $status_pendaftaran,
-				'berkas_peserta' => $berkas_peserta
-			];
-
-			$this->data_lab = [
-				'jumlah_peserta' => $jumlah_peserta+1
-			];
-
-			$this->M_formasi_lab->update_formasi_lab($this->data_lab, $id_lab);
-			$this->peserta->update_paserta($this->data, $id_peserta);
-			return redirect()->to('registrasi/selesai/'.$nim);
-	    }
+		return redirect()->to('registrasi/selesai?nim='.$nim);
 	}
 
-	public function selesai($nim)
+	public function selesai()
 	{	
-		$this->data ['title'] 	= "Registrasi Selesai";
-		$this->data ['judul'] 	= "Congratulations !";
-		$this->data ['page'] 		= "registrasi_selesai";
+		$this->data['title'] 	= "Registrasi Selesai";
+		$this->data['judul'] 	= "Congratulations!";
+		$this->data['page'] 		= "registrasi_selesai";
 
-		$this->data ['informasi'] 	= $this->informasi->data_informasi()->result();
-		$this->data ['data_peserta'] 	= $this->peserta->cek_peserta($nim)->result();
+		$this->data['informasi'] 	= $this->informasi->findAll();
+		$this->data['data_peserta'] 	= $this->peserta->cek_peserta($this->request->getVar('nim'));
 
 		return view('v_registrasi/v_app', $this->data);
 	}

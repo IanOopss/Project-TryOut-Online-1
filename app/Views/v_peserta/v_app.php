@@ -1,16 +1,15 @@
 <?php 
 echo $this->include('layouts/head');
+
 foreach ($informasi as $key) {
-  $tgl_ujian_cat = $key->tgl_ujian_cat;
-  $waktu_pengerjaan = $key->waktu_pengerjaan;
+  $tgl_ujian_cat = $key['tgl_ujian_cat'];
+  $waktu_pengerjaan = $key['waktu_pengerjaan'];
 }
 
-foreach ($peserta as $pstr) {
-  $status_verifikasi = $pstr->status_verifikasi;
-}
+$status_verifikasi = $peserta['status_verifikasi'];
 
 $tgl_sekarang = date('Y-m-d');
- ?>
+?>
 
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
 <body class="hold-transition skin-blue layout-top-nav">
@@ -40,18 +39,18 @@ $tgl_sekarang = date('Y-m-d');
               <!-- Menu Toggle Button -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- The user image in the navbar-->
-                 <img src="<?= base_url(); ?>assets/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                 <img src="<?= base_url(); ?>/assets/adminlte/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs"><?= $pstr->nama_peserta; ?></span>
+                <span class="hidden-xs"><?= $peserta['nama_peserta']; ?></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
                 <li class="user-header">
-                  <img src="<?= base_url(); ?>assets/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                  <img src="<?= base_url(); ?>/assets/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                   <p>
-                    <?= $pstr->nama_peserta; ?>
-                    <small><?= $pstr->nim; ?></small>
+                    <?= $peserta['nama_peserta'] ?>
+                    <small><?= $peserta['nim'] ?></small>
                   </p>
                 </li>
                 
@@ -78,7 +77,6 @@ $tgl_sekarang = date('Y-m-d');
       }else{
         include 'dashboard/tidak_lulus.php';
       }
-      
     }elseif ($page == 'ujian_cat'){
       include 'ujian_cat/index.php';
     }

@@ -2,14 +2,11 @@
   foreach ($informasi as $key ) {
     $nama_kegiatan = $key['nama_kegiatan'];
   }
-
-  foreach ($data_peserta as $peserta) {
-    $id_peserta = $peserta['id_peserta'];
-    $nim = $peserta['nim'];
-    $nama_peserta = $peserta['nama_peserta'];
-    $password_peserta = $this->encryption->decrypt($peserta['password_peserta']);
-  }
-
+  
+  
+  $id_peserta = $data_peserta['id_peserta'];
+  $nim = $data_peserta['nim'];
+  $nama_peserta = $data_peserta['nama_peserta'];
  ?>
 <body class="hold-transition skin-blue layout-top-nav">
   <div class="wrapper">
@@ -37,7 +34,6 @@
 
           <div class="callout callout-success">
             <h4>NIM : <?= $nim; ?></h4>
-            <h4>PASSWORD : <?= $password_peserta; ?></h4>
             <h4>NAMA : <?= $nama_peserta; ?></h4>
           </div>
 

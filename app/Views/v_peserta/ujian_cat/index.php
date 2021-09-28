@@ -3,7 +3,7 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          <?php echo $key->nama_kegiatan; ?>
+          <?= $key['nama_kegiatan'] ?>
         </h1>
       </section>
 
@@ -16,50 +16,48 @@
             <div class="message"></div>
 
             <div class="callout callout-info">
-              <h4><?php echo $title; ?></h4>
-              <h4>Formasi - <?php echo $pstr->nama_lab; ?></h4>
+              <h4><?= $title; ?></h4>
+              <h4>Formasi - <?= $data_lab['nama_lab']; ?></h4>
             </div>
 
             <?php 
-            //List Jawaban
-            foreach ($tampil_soal as $tampil_s) {
-              $id_soal = $tampil_s->id_soal;
-              $nama_soal = $tampil_s->nama_soal;
-              $pertanyaan = $tampil_s->pertanyaan;
-              $option_1 = $tampil_s->option_1;
-              $option_2 = $tampil_s->option_2;
-              $option_3 = $tampil_s->option_3;
-              $option_4 = $tampil_s->option_4;
-              $option_5 = $tampil_s->option_5;
-
-            }
-
-             ?>
+              //List Jawaban
+              foreach ($tampil_soal as $tampil_s) {
+                $id_soal = $tampil_s['id_soal'];
+                $nama_soal = $tampil_s['nama_soal'];
+                $pertanyaan = $tampil_s['pertanyaan'];
+                $option_1 = $tampil_s['option_1'];
+                $option_2 = $tampil_s['option_2'];
+                $option_3 = $tampil_s['option_3'];
+                $option_4 = $tampil_s['option_4'];
+                $option_5 = $tampil_s['option_5'];
+              }
+            ?>
 
             <div class="box box-primary">
               <div class="box-header with-border">
-                <h3 class="box-title"><?php echo $nama_soal;?></h3>
+                <h3 class="box-title"><?= $nama_soal;?></h3>
               </div>
-              <?php echo form_open('peserta/simpan_jawaban/'.$no_soal); ?>
-              <input type="hidden" name="id_soal" value="<?php echo $id_soal;?>">
+              <?= form_open('peserta/simpan_jawaban/'.$no_soal); ?>
+              <input type="hidden" name="id_soal" value="<?= $id_soal;?>">
                   <div class="box-body">
                     <div class="form-group">
-                      <p>No. <?php echo $no_soal;?></p>
-                      <?php echo $pertanyaan;?>
+                      <p>No. <?= $no_soal;?></p>
+                      <?= $pertanyaan;?>
                       <label class="jawaban">
-                        <input type="radio" name="jawaban_peserta" value="A" class="flat-red" <?php if ($jawaban_peserta == 'A') echo "checked"; ?>> A. <?php echo $option_1;?><br>
+                        <input type="radio" name="jawaban_peserta" value="A" class="flat-red" <?= ($jawaban_peserta == 'A') ? 'checked' : '' ?> > A. <?= $option_1;?><br>
                       </label>
                       <label class="jawaban">
-                        <input type="radio" name="jawaban_peserta" value="B" class="flat-red" <?php if ($jawaban_peserta == 'B') echo "checked"; ?>> B. <?php echo $option_2;?><br>
+                        <input type="radio" name="jawaban_peserta" value="B" class="flat-red" <?= ($jawaban_peserta == 'B') ? 'checked' : '' ?> > B. <?= $option_2;?><br>
                       </label>
                       <label class="jawaban">
-                        <input type="radio" name="jawaban_peserta" value="C" class="flat-red" <?php if ($jawaban_peserta == 'C') echo "checked"; ?>> C. <?php echo $option_3;?><br>
+                        <input type="radio" name="jawaban_peserta" value="C" class="flat-red" <?= ($jawaban_peserta == 'C') ? 'checked' : '' ?> > C. <?= $option_3;?><br>
                       </label>
                       <label class="jawaban">
-                        <input type="radio" name="jawaban_peserta" value="D" class="flat-red" <?php if ($jawaban_peserta == 'D') echo "checked"; ?>> D. <?php echo $option_4;?><br>
+                        <input type="radio" name="jawaban_peserta" value="D" class="flat-red" <?= ($jawaban_peserta == 'D') ? 'checked' : '' ?> > D. <?= $option_4;?><br>
                       </label>
                       <label class="jawaban">
-                        <input type="radio" name="jawaban_peserta" value="E" class="flat-red" <?php if ($jawaban_peserta == 'E') echo "checked"; ?>> E. <?php echo $option_5;?><br>
+                        <input type="radio" name="jawaban_peserta" value="E" class="flat-red" <?= ($jawaban_peserta == 'E') ? 'checked' : '' ?> > E. <?= $option_5;?><br>
                       </label>
                       
                     </div>
@@ -67,7 +65,7 @@
                 <div class="modal-footer">
                   <button type="submit" class="btn btn-primary pull-left">Simpan dan Lanjutkan</button>
                   <?php 
-                  $next = $no_soal+1;
+                  $next = $no_soal + 1;
                     echo "<a href='".base_url('peserta/ujian_cat/'. $next)."'>
                             <button type='button' class='btn btn-danger' data-dismiss='modal'>Lewati Soal Ini</button>
                           </a>";
@@ -82,7 +80,7 @@
             <div class="box box-primary">
               <div class="box-header with-border">
                 <h3 class="box-title">Nomor Soal</h3>
-                <a href="<?php echo base_url('peserta/selesai_ujian') ?>">
+                <a href="<?= base_url('peserta/selesai_ujian') ?>">
                   <button type="button" class="btn btn-success pull-right"><i class="fa fa-check-circle"></i> Selesai</button>
                 </a>
                 
@@ -90,11 +88,8 @@
               <div class="box-body">
                 <div class="col-sm-12">
                 <?php 
-
                 // Nomor Soal
-                foreach ($data_jawaban as $data_j) {
-                    $list_jawaban = $data_j->list_jawaban;
-                }
+                $list_jawaban = $data_jawaban['list_jawaban'];
 
                 $jawaban = explode(",", $list_jawaban);
                 $nomor = sizeof($jawaban); 

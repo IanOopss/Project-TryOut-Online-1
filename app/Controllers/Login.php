@@ -38,39 +38,32 @@ class Login extends BaseController
 		$cek_peserta = $this->peserta->cek_peserta($username);
 
 		$user = $cek_peserta['nim'];
-		$pass = $this->encryption->decrypt($cek_peserta['password_peserta']);
-		
+		$pass_verify = password_verify($password, $cek_peserta['password_peserta']);
+
 		if ($user == "") {
 			session()->set_flashdata('warning', 'Maaf, NIM Tidak Terdaftar.');
-			redirect('login');
+			return redirect()->to('login');
 		
-		}elseif($pass != $password){
+		}elseif(!$pass_verify){
 			session()->set_flashdata('warning', 'Maaf, Password Yang Anda Masukan Salah.');
-			redirect('login');
-		}elseif ($pass == $password) {
-
+			return redirect()->to('login');
+		}elseif ($pass_verify) {
 			$cek_peserta = $this->peserta->cek_peserta($username);
-			foreach($cek_peserta as $sess){
-				$id_peserta 	= $sess->id_peserta;
-				$id_lab			= $sess->id_lab;
-				$nim 			= $sess->nim;
-				$nama_peserta 	= $sess->nama_peserta;
-			}
-
+			
 			$user_data = array(
-				'id_peserta' 		=> $id_peserta,
-				'id_lab' 		=> $id_lab,
-				'nim' 		=> $nim,
-				'nama_peserta' 	=> $nama_peserta
+				'id_peserta' 	=> $cek_peserta['id_peserta'],
+				'id_lab' 		=> $cek_peserta['id_lab'],
+				'nim' 			=> $cek_peserta['nim'],
+				'nama_peserta' 	=> $cek_peserta['nama_peserta'],
+				'isLoggedIn' 	=> TRUE
 			);
 
 			session()->set($user_data);
 			
-			redirect('peserta');
-
+			return redirect()->to('peserta');
 		}else{
 			session()->set_flashdata('warning', 'Maaf, kombinasi username dan password salah.');
-			redirect('login');
+			return redirect()->to('login');
 		}
 	}
 
@@ -108,18 +101,17 @@ class Login extends BaseController
 		// dd($this->encryption->encrypt(base64_encode('admin123')));
 		//Cek Login Panitia
 		$cek_panitia = $this->admin->cek_panitia($username);
+		$pass_verify = password_verify($password, $cek_panitia['password']);
 		
 		$user = $cek_panitia['username'];
-		$pass = $this->encryption->decrypt(base64_decode($cek_panitia['password']));
 		
 		if ($user == "") {
 			session()->set_flashdata('warning', 'Maaf, Panitia Tidak Terdaftar.');
 			return redirect()->to('login/panitia');
-		
-		}elseif($pass != $password){
+		}elseif(!$pass_verify){
 			session()->set_flashdata('warning', 'Maaf, Password Yang Anda Masukan Salah.');
 			return redirect()->to('login/panitia');
-		}elseif ($pass == $password) {
+		}elseif ($pass_verify) {
 			$cek_panitia = $this->admin->cek_panitia($username);
 			
 			$id_admin 		= $cek_panitia['id_admin'];
@@ -149,7 +141,7 @@ class Login extends BaseController
 		
 		}else{
 			session()->set_flashdata('warning', 'Maaf, kombinasi username dan password salah.');
-			return redirect()->to('login/panitia_login');
+			return redirect()->to('login/panitia');
 		}
 	}
 }

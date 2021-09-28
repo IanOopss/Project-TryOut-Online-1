@@ -1,19 +1,17 @@
 <?php 
 
 foreach ($informasi as $key) {
-	$nama_kegiatan = $key->nama_kegiatan;
-	$tgl_ujian_cat = $key->tgl_ujian_cat;
+	$nama_kegiatan = $key['nama_kegiatan'];
+	$tgl_ujian_cat = $key['tgl_ujian_cat'];
 }
 
-foreach ($peserta as $cetak) {
-	$nim 			= $cetak->nim;
-	$nama_peserta 	= $cetak->nama_peserta;
-	$foto 			= $cetak->foto;
-	$nama_lab		= $cetak->nama_lab;
+$nim 			= $peserta['nim'];
+$nama_peserta 	= $peserta['nama_peserta'];
+$foto 			= $peserta['foto'];
 
-}
+$nama_lab		= $data_lab['nama_lab'];
 
-$pdf = new pdf('P','mm','A4');
+$pdf = new \FPDF('P','mm','A4');
 
 $pdf->AddPage();
 
@@ -26,7 +24,7 @@ $pdf->SetFont('Arial','B',14);
 $pdf->Cell(190,7,'Formasi - '.$nama_lab,0,1,'C');
 $pdf->Cell(10,7,'',0,1);
 
-$pdf->Image('uploads/berkas_peserta/'.$foto,10,66,30);
+$pdf->Image('assets/academy/img/uploads/berkas_peserta/'.$foto,10,66,30);
 //$pdf->Cell(35);
 //$pdf->Image('uploads/berkas_peserta/'.$foto,155,39,30);
 
@@ -50,6 +48,6 @@ $pdf->Cell(0,6,'1. Kartu ujian harus dibawa ketika ujian berlangsung.',0,1,'L',1
 $pdf->Cell(0,6,'2. Diwajibkan memakai kemeja putih lengan panjang dan celana / rok bahan hitam.',0,1,'L',1);
 $pdf->Cell(0,6,'3. Tidak diperbolehkan memakai sandal dan kaos oblong.',0,1,'L',1);
 
-$pdf->Output('Kartu Ujian -'.$nim.'.pdf','D');
+$pdf->Output('Kartu Ujian - '.$nim.'.pdf','D');
             
  ?>

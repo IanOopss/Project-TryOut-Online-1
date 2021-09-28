@@ -3,7 +3,7 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          <?php echo $key->nama_kegiatan; ?>
+          <?= $key['nama_kegiatan']; ?>
         </h1>
       </section>
 
@@ -12,7 +12,7 @@
         <div class="callout callout-danger">
           <h4>Mohon Maaf!</h4>
 
-          <p>Anda Tidak Lulus Administrasi <?php echo $key->nama_kegiatan; ?></p>
+          <p>Anda Tidak Lulus Administrasi <?= $key['nama_kegiatan']; ?></p>
         </div>
 
       </section>

@@ -1,4 +1,4 @@
-<script src="<?php echo base_url(); ?>assets/flip/compiled/flipclock.js"></script>
+<script src="<?= base_url(); ?>/assets/flip/compiled/flipclock.js"></script>
 <script type="text/javascript">
 
 	<?php 
@@ -18,12 +18,12 @@
 	        autoStart: false,
 	        callbacks: {
 	        	stop: function() {
-	        		window.location.assign("<?php echo base_url(); ?>peserta/selesai_ujian"); 
+	        		window.location.assign("<?= base_url(); ?>peserta/selesai_ujian"); 
 	        	}
 	        }
 	    });
 			    
-	    clock.setTime(<?php echo  $diff;?>);
+	    clock.setTime(<?=  $diff ?>);
 	    clock.setCountdown(true);
 	    clock.start();
 

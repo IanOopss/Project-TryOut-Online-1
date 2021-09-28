@@ -30,7 +30,6 @@
                     <th>No.</th>
                     <th>Nama</th>
                     <th>Username</th>
-                    <th>Password</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -44,7 +43,6 @@
                     <td><?= $no; ?>.</td>
                     <td><?= $key['nama']; ?></td>
                     <td><?= $key['username']; ?></td>
-                    <td><?= $key['password'] ?></td>
                     <td>
                       <a data-toggle="tooltip" data-placement="top" title="Edit">
                       <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalEdit<?= $id_admin; ?>"><i class="fa fa-edit"></i></button>

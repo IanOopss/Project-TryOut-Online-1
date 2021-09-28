@@ -13,5 +13,4 @@ class M_jawaban extends Model {
         'id_peserta', 'list_soal', 'list_jawaban', 
         'waktu_mulai', 'waktu_selesai', 'status_jawaban'
     ];
-
 }

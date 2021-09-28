@@ -1,8 +1,6 @@
 <?php 
-foreach ($data_peserta as $key) {
-  $id_peserta = $key['id_peserta'];
-  $nim = $key['nim'];
-}
+  $id_peserta = $data_peserta['id_peserta'];
+  $nim = $data_peserta['nim'];
  ?>
 <body class="hold-transition skin-blue layout-top-nav">
   <div class="wrapper">
@@ -28,8 +26,6 @@ foreach ($data_peserta as $key) {
             <p>Berkas Lamaran Disatukan Dalam Satu Pdf secara berurutan dengan Ukuran Maksimal 2 MB</p>
           </div>
 
-          <?= $this->include('layouts/notifikasi'); ?>
-
           <div class="box box-info">
             <div class="box-header with-border">
               <h3 class="box-title">Form <?= $judul; ?></h3>
@@ -42,10 +38,7 @@ foreach ($data_peserta as $key) {
                       <label>Formasi Lab</label>
                       <select class="form-control select2" name="id_lab" style="width: 100%;" required>
                         <option selected="selected" value="">--- Pilih ---</option>
-                        <?php
-                        foreach ($formasi_lab as $key) {
-                          
-                         ?>
+                        <?php foreach($formasi_lab as $key) { ?>
                         <option value="<?= $key['id_lab']; ?>"><?= $key['nama_lab']; ?></option>
                       <?php 
                       } ?>

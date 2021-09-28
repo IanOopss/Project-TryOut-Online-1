@@ -3,7 +3,6 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\Admin\Admin;
-use TCPDF;
 
 class DataPeserta extends Admin
 {
@@ -90,6 +89,19 @@ class DataPeserta extends Admin
 		$cek_formasi =  $this->lab->where('id_lab', $id_lab)->first();
 		
 		$jumlah_lulus_adm = $cek_formasi['jumlah_lulus_adm'];
+		
+		$email_peserta = $this->peserta->find($id_peserta)['email'];
+		
+		$email = \Config\Services::email();
+
+		$email->setFrom('dummysender123789@gmail.com', 'Pengirim Email');
+		$email->setTo($email_peserta);
+		$email->setCC('dummysender123789@gmail.com');
+
+		$email->setSubject('Anda Lulus');
+		$email->setMessage('Selamat anda telah lulus verifikasi pendaftaran, anda dapat melakukan ujian tryout pada tanggal XX-XX-XXXX.');
+
+		$email->send();
 		
 		$lab = [
 			'jumlah_lulus_adm' => $jumlah_lulus_adm+1

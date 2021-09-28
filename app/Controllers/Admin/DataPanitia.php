@@ -15,10 +15,6 @@ class DataPanitia extends Admin
 		$data['jenis_soal'] = $this->soal->findAll();
 		$data['data_panitia'] = $this->admin->findPanitia();
 		
-		foreach($data['data_panitia'] as &$v ){
-			$v['password'] = $this->encryption->decrypt(base64_decode($v['password']));
-		}
-
 		return view('v_admin/v_app', $data);
 	}
 
