@@ -3,7 +3,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <?= $key['nama_kegiatan'] ?>
+        <?= $key['nama_kegiatan']?>
       </h1>
     </section>
 
@@ -74,10 +74,7 @@
                 ";
             
             }else{
-              foreach ($data_jawaban as $data_j) {
-                $sts = $data_j['status_jawaban'];
-              }
-              if ($sts == "Belum") {
+              if ($data_jawaban['status_jawaban'] == "Belum") {
                 echo "
                   <div class='col-md-8'>
                     <div class='callout callout-success'>
@@ -88,7 +85,6 @@
                 ";
               }
               else{
-                
                 //Nilai Ujian CAT Peserta
                 echo "
                   <div class='col-md-8'>
@@ -133,7 +129,7 @@
             ";
             
             }else{
-              
+              dd($title);
               //Nilai Ujian CAT Peserta
               echo "
                   <div class='col-md-8'>
@@ -147,6 +143,7 @@
 
                         <ul class='list-group list-group-unbordered'>
                 ";
+                dd($data_nilai);
                 foreach ($data_nilai as $nilai) {
                   echo "
                       <li class='list-group-item'>

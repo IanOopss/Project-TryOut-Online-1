@@ -13,4 +13,11 @@ class M_jawaban extends Model {
         'id_peserta', 'list_soal', 'list_jawaban', 
         'waktu_mulai', 'waktu_selesai', 'status_jawaban'
     ];
+
+	public function update_jawaban($id, $data){
+		$this->db      = \Config\Database::connect();
+		$tbl = $this->db->table('tbl_jawaban');
+		$tbl->where('id_peserta', $id);
+		$tbl->update($data);
+	}
 }

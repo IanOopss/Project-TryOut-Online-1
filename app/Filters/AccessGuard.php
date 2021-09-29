@@ -10,16 +10,18 @@ class AccessGuard implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         if (session()->get('isLoggedIn')) {
-
 			if (session()->get('level_admin') == "1") {
 				return redirect()->to('Admin/Dashboard');
 			}
 
-			if (session()->get('level_admin') == "3") {
+			if (session()->get('level_admin') == "2") {
+				return redirect()->to('panitia');
+			}
+
+			if (!session()->get('level_admin')) {
 				return redirect()->to('peserta');
 			}
         }
-
     }
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)

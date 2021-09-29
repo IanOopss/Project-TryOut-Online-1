@@ -13,12 +13,22 @@ class M_nilai extends Model {
     
 	public function cek_nilai($id_peserta, $id_soal){
 		return $this->where('id_peserta', $id_peserta)
-		            ->find($id_soal);
+		            ->where('id_soal', $id_soal)
+					->findAll();
+	}
+
+	public function getNilai($id){
+		return $this->select('tbl_nilai.*, tbl_soal.nama_soal')
+					->join('tbl_soal', 'tbl_nilai.id_soal = tbl_soal.id_soal')
+					->where('tbl_nilai.id_peserta', $id)
+					->findAll();
 	}
 
 	public function update_nilai($id_peserta, $id_soal, $nilai){
-		$this->where('id_peserta', $id_peserta)
-		    ->where('id_soal ', $id_soal)
-		    ->update('tbl_nilai', $nilai);	
+		$this->db      = \Config\Database::connect();
+		$tbl = $this->db->table('tbl_nilai');
+		$tbl->where('id_peserta', $id_peserta);
+		$tbl->where('id_soal', $id_soal);
+		$tbl->update($nilai);
 	}
 }

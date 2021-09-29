@@ -14,16 +14,16 @@ class Peserta extends BaseController
 		$this->data['informasi'] 	= $this->informasi->findAll();
 
 		$this->data['peserta'] = $this->peserta->find($this->id_peserta);
-
+		
 		// Data Jawaban
 		$this->data['jawaban'] 	= $this->jawaban->where('id_peserta', $this->id_peserta)->countAllResults();
-		$this->data['data_jawaban'] 	= $this->jawaban->findAll();
-
+		$this->data['data_jawaban'] 	= $this->jawaban->where('id_peserta', $this->id_peserta)->first();
+		
 		//Nilai Peserta
-		$this->data['data_nilai'] 	= $this->nilai->findAll();
-
+		$this->data['data_nilai'] 	= $this->nilai->getNilai($this->id_peserta);
+		
 		$this->data['data_lab'] 	= $this->lab->find($this->data['peserta']['id_lab']);
-
+		
 		return view('v_peserta/v_app', $this->data);
 	}
 	
@@ -117,7 +117,6 @@ class Peserta extends BaseController
         
 		$jwb = explode(",", $list_soal);
         $no = sizeof($jwb);
-        
         //Jika Melewati No Soal
         if ($no_soal <= 0 || $no_soal > $no) {
         	return redirect()->to('peserta/ujian_cat/1');
@@ -156,36 +155,32 @@ class Peserta extends BaseController
 
 		$next = $no_soal + 1;
 		$list = $no_soal - 1;
-
+		
 		//Cek Data Peserta Dan Soal Pada Tabel Nilai
 		$cek_nilai = $this->nilai->cek_nilai($this->id_peserta, $id_soal);
-		
+
 		if($cek_nilai != null){
 			foreach ($cek_nilai as $cek_n) {
-				$id_pe = $cek_n['id_peserta'];
-				$id_so = $cek_n['id_soal'];
 				$tot_n = $cek_n['nilai_peserta'];
 			}
 		}
-
 		//Id Peserta dan Id Soal Tidak Ada Dalam Tabel Nilai
 		if ($cek_nilai == null) {
-			
 			//Jawaban Kosong
 			if ($j_peserta == "") {
 				return redirect()->to('peserta/ujian_cat/'.$next);
 			}else{
 				
 				//Cek No Soal Jawaban Peserta
-				$cek_jawaban = $this->jawaban->where('id_peserta', $this->id_peserta)->findAll();
-				foreach ($cek_jawaban as $cek) {
-		        	$list_jawaban = $cek['list_jawaban'];
-		        }
+				$cek_jawaban = $this->jawaban->where('id_peserta', $this->id_peserta)->first();
 				
+				$list_jawaban = $cek_jawaban['list_jawaban'];
+		        
 		        //List Jawaban
 		        $jwb = explode(",", $list_jawaban);
 		        $jawaban = $jwb[$list]; 
 		        $hsl = explode(":", $jawaban);
+				
 		        /*
 		        $hsl[0]  -------- id_pertanyaan;
 		        $hsl[1]  -------- Jawaban Peserta;
@@ -196,10 +191,9 @@ class Peserta extends BaseController
 		        //Pengecekan Kunci jawaban
 		        $id_pertanyaan = $hsl[0];
 		        $cek_pertanyaan = $this->pertanyaan->find($id_pertanyaan);
-		        foreach ($cek_pertanyaan as $cek_per) {
-		        	$kunci_jawaban = $cek_per['jawaban'];
-		        }
 
+				$kunci_jawaban = $cek_pertanyaan['jawaban'];
+				
 		        if ($kunci_jawaban == $j_peserta) {
 		        	//Benar
 		        	$hsl[1] = $j_peserta;
@@ -239,6 +233,7 @@ class Peserta extends BaseController
 						'id_soal' => $id_soal,
 						'nilai_peserta' => "0"
 					];
+					
 					$this->nilai->insert($nilai);
 
 					$hsl = implode(':', $hsl);
@@ -251,8 +246,8 @@ class Peserta extends BaseController
 			        $data = [
 			        	'list_jawaban' => $jawaban_peserta
 			        ];
-			        
-			        $this->jawaban->update($this->id_peserta, $data);
+					
+					$this->jawaban->update_jawaban($this->id_peserta, $data);
 		        }
 				return redirect()->to('peserta/ujian_cat/'.$next);
 			}
@@ -263,14 +258,13 @@ class Peserta extends BaseController
 			//Cek Jawaban Peserta
 			if ($j_peserta == "") {
 				return redirect()->to('peserta/ujian_cat/'.$next);
-
 			}else{
-
 				//List Jawaban Peserta
-				$cek_jawaban = $this->jawaban->where('id_peserta', $this->id_peserta)->first();
-				foreach ($cek_jawaban as $cek) {
-		        	$list_jawaban = $cek['list_jawaban'];
-		        }
+				$cek_jawaban = $this->jawaban->where('id_peserta', $this->id_peserta)->findAll();
+				
+				foreach($cek_jawaban as $cek){
+					$list_jawaban = $cek['list_jawaban'];
+				}
 
 		        //List Jawaban
 		        $jwb = explode(",", $list_jawaban);
@@ -281,10 +275,9 @@ class Peserta extends BaseController
 		        $id_pertanyaan = $hsl[0];
 		        $bs = $hsl[3];
 		        $cek_pertanyaan = $this->pertanyaan->find($id_pertanyaan);
-		        foreach ($cek_pertanyaan as $cek_per) {
-		        	$kunci_jawaban = $cek_per['jawaban'];
-		        }
-
+				
+				$kunci_jawaban = $cek_pertanyaan['jawaban'];
+				
 		        if ($bs == "B") {
 		        	//Benar
 		        	if ($kunci_jawaban == $j_peserta) {
@@ -307,7 +300,7 @@ class Peserta extends BaseController
 			        	'list_jawaban' => $jawaban_peserta
 			        ];
 					
-			        $this->jawaban->update($this->id_peserta, $data);
+					$this->jawaban->update_jawaban($this->id_peserta, $data);
 
 			        //Upadate Nilai Peserta
 			        $nilai_peserta = $tot_n - 5;
@@ -322,6 +315,7 @@ class Peserta extends BaseController
 					$this->nilai->update_nilai($this->id_peserta, $id_soal, $nilai);
 		        	}
 		        }else{
+					
 		        	//Benar
 		        	if ($kunci_jawaban == $j_peserta) {
 		        		$hsl[1] = $j_peserta;
@@ -337,13 +331,15 @@ class Peserta extends BaseController
 				        $data = [
 				        	'list_jawaban' => $jawaban_peserta
 				        ];
-				        $this->jawaban->update($this->id_peserta, $data);
+					
+						$this->jawaban->update_jawaban($this->id_peserta, $data);
 
 				        //Upadate Nilai Peserta
 			        	$nilai_peserta = $tot_n + 5;
 			        	$nilai = [
 							'nilai_peserta' => $nilai_peserta
 						];
+
 						$this->nilai->update_nilai($this->id_peserta, $id_soal, $nilai);
 		        	}
 		        	else{
@@ -362,7 +358,8 @@ class Peserta extends BaseController
 				        $data = [
 				        	'list_jawaban' => $jawaban_peserta
 				        ];
-				        $this->jawaban->update($this->id_peserta, $data);
+					
+						$this->jawaban->update_jawaban($this->id_peserta, $data);
 		        	}
 		        }
 				return redirect()->to('peserta/ujian_cat/'.$next);
@@ -371,14 +368,12 @@ class Peserta extends BaseController
 	}
 
 	public function selesai_ujian()
-	{
-		$this->id_peserta  	= $this->session->userdata('id_peserta');
-		//Update Jawaban 
+	{	//Update Jawaban 
         $data = [
         	'status_jawaban' => "Selesai"
         ];
-        
-        $this->jawaban->update_jawaban($data, $this->id_peserta);
+
+		$this->jawaban->update_jawaban($this->id_peserta, $data);
 
         return redirect()->to('peserta');
 	}

@@ -7,7 +7,8 @@
 	$awal  = strtotime($tgl);
 	$akhir = strtotime($waktu_selesai);
 	$diff  = $akhir - $awal;
-	 ?>
+	?>
+
 	var clock;
 	
 	$(document).ready(function() {
@@ -18,7 +19,7 @@
 	        autoStart: false,
 	        callbacks: {
 	        	stop: function() {
-	        		window.location.assign("<?= base_url(); ?>peserta/selesai_ujian"); 
+	        		window.location.assign("<?= base_url(); ?>/peserta/selesai_ujian"); 
 	        	}
 	        }
 	    });
@@ -26,6 +27,5 @@
 	    clock.setTime(<?=  $diff ?>);
 	    clock.setCountdown(true);
 	    clock.start();
-
 	});
 </script>

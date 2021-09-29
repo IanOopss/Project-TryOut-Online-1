@@ -6,12 +6,12 @@ use App\Controllers\Admin\Admin;
 
 class DataPeserta extends Admin
 {
-	private function berkas($id_lab, $berkas)
+	private function berkas($berkas)
 	{ 
 		return $link = "
-			<a href='".base_url('data_peserta/download/'.$id_lab.'/'.$berkas)."'>
-                <p align='center'><i class='fa fa-file'></i></p>
-            </a>";
+			<a href='".base_url('/assets/academy/img/uploads/berkas_peserta/'.$berkas)."' target='_blank'>
+				<p align='center'><i class='fa fa-file'></i></p>
+			</a>";
 	}
 
 	private function action($id_lab, $id_peserta, $status_verifikasi)
@@ -184,7 +184,7 @@ class DataPeserta extends Admin
 			$row[] = $personal['nim'];
 			$row[] = $personal['nama_peserta'];
 			$row[] = $personal['ipk'];
-			$row[] = $this->berkas($id_lab, $personal['berkas_peserta']);
+			$row[] = $this->berkas($personal['berkas_peserta']);
 			$row[] = tgl_indonesia($personal['tgl_selesai_pendaftaran']);
 			$row[] = $personal['status_verifikasi'];
 			$row[] = $this->action($id_lab, $personal['id_peserta'], $personal['status_verifikasi']);

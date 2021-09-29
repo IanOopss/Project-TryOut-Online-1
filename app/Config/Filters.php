@@ -60,5 +60,7 @@ class Filters extends BaseConfig
      *
      * @var array
      */
-    public $filters = ['before' => 'admin/*'];
+    public $filters = [
+        'authGuard' => ['before' => ['admin', 'admin/*', 'panitia', 'peserta']],
+    ];
 }
