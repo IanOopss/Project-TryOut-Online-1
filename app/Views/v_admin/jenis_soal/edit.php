@@ -13,6 +13,27 @@
             <input type="text" name="nama_soal" value="<?= $jso['nama_soal'] ?>" class="form-control" placeholder="Nama Soal" required>
           </div>
           <div class="form-group">
+            <label>Kategori Peminatan</label>
+            <select class="form-control select2" name="peminatan" style="width: 100%;" required>
+              <option selected disabled>--- Pilih ---</option>
+              <?php 
+                foreach ($tbl_peminatan as $p) {
+              ?>
+                <option value="<?= $p['id_peminatan'] ;?>"
+                  <?php  
+                      if($p['id_peminatan'] == $jso['id_peminatan']){
+                        echo 'selected';
+                      }
+                  ?>
+                >
+                  <?= $p['nama_peminatan'] ;?>
+                </option>
+              <?php
+                }
+              ?>
+            </select>
+          </div>
+          <div class="form-group">
             <label>Jumlah Soal</label>
             <input type="text" name="jumlah_soal" value="<?= $jso['jumlah_soal'] ?>" class="form-control" data-inputmask='"mask": "99"' data-mask required>
           </div>

@@ -3,43 +3,51 @@ namespace App\Controllers;
 
 class Login extends BaseController
 {
+	public function __construct(){
+		$this->data = [
+			'validation' => \Config\Services::validation(),
+		];
+	}
+
 	public function index()
 	{
-		$data['title'] 	= "Login Peserta";
-		$data['page'] 		= "login_peserta";
-		$data['informasi'] 	= $this->informasi->findAll();
+		$this->data['title'] 		= "Login Peserta";
+		$this->data['page'] 		= "login_peserta";
+		$this->data['informasi'] 	= $this->informasi->findAll();
 
-		return view('v_login/v_app', $data);
+		return view('v_login/v_app', $this->data);
 	}
 
 	public function peserta_login()
 	{
 		if(!$this->validate([
-			'username' => [
-				'rules'  => 'required',
+			'email' => [
+				'rules'  => 'required|valid_emails',
 				'errors' => [
-					'required' => 'Username masih kosong',
+					'required' => 'Email belum diisi',
+					'valid_emails' => 'Mohon diisi dengan email yang valid',
 				]
 			],
 			'password' => [
-				'rules'  => 'required',
+				'rules'  => 'required|min_length[8]',
 				'errors' => [
-					'required' => 'Password masih kosong',			
+					'required' => 'Password belum diisi',
+					'min_length' => 'Password memiliki panjang minimal 8 karakter',				
 				]
 			],
 		])) {
 			return redirect()->to('login')->withInput();
 		}
 
-		$username = $this->request->getVar('username');
+		$email = $this->request->getVar('email');
 		$password = $this->request->getVar('password');
 
 		//Cek Login peserta
-		$cek_peserta = $this->peserta->cek_peserta($username);
+		$cek_peserta = $this->peserta->cek_peserta($email);
 
-		$user = $cek_peserta['nim'];
+		$user = $cek_peserta['email'];
 		$pass_verify = password_verify($password, $cek_peserta['password_peserta']);
-
+		
 		if ($user == "") {
 			session()->set_flashdata('warning', 'Maaf, NIM Tidak Terdaftar.');
 			return redirect()->to('login');
@@ -48,12 +56,12 @@ class Login extends BaseController
 			session()->set_flashdata('warning', 'Maaf, Password Yang Anda Masukan Salah.');
 			return redirect()->to('login');
 		}elseif ($pass_verify) {
-			$cek_peserta = $this->peserta->cek_peserta($username);
+			$cek_peserta = $this->peserta->cek_peserta($email);
 			
 			$user_data = array(
 				'id_peserta' 	=> $cek_peserta['id_peserta'],
-				'id_lab' 		=> $cek_peserta['id_lab'],
-				'nim' 			=> $cek_peserta['nim'],
+				'id_peminatan' 		=> $cek_peserta['id_peminatan'],
+				'email' 			=> $cek_peserta['email'],
 				'nama_peserta' 	=> $cek_peserta['nama_peserta'],
 				'isLoggedIn' 	=> TRUE
 			);
@@ -69,11 +77,11 @@ class Login extends BaseController
 
 	public function panitia()
 	{
-		$data ['title'] 	= "Login Panitia";
-		$data ['page'] 		= "login_panitia";
-		$data ['informasi'] 	= $this->informasi->findAll();
+		$this->data['title'] 	= "Login Panitia";
+		$this->data['page'] 		= "login_panitia";
+		$this->data['informasi'] = $this->informasi->findAll();
 		
-        return view('v_login/v_app', $data);
+        return view('v_login/v_app', $this->data);
 	}
 
 	public function panitia_login()

@@ -1,4 +1,4 @@
-<div class="modal fade" id="myModalEdit<?= $id_lab; ?>">
+<div class="modal fade" id="myModalEdit<?= $id; ?>">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -6,16 +6,12 @@
           <span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title">Form Edit Data Laboratorium</h4>
       </div>
-      <?= form_open_multipart('Admin/FormasiLab/editLab/'.$id_lab); ?>
+      <?= form_open_multipart('Admin/FormasiLab/editLab/'.$id); ?>
       <?= csrf_field() ;?>
         <div class="box-body">
           <div class="form-group">
-            <label>Nama Laboratorium</label>
-            <input type="text" name="nama_lab" value="<?= $key['nama_lab'] ?>" class="form-control" placeholder="Nama Laboratorium" required>
-          </div>
-          <div class="form-group">
-            <label>Jumlah Formasi</label>
-            <input type="text" name="jumlah_formasi" value="<?= $key['jumlah_formasi'] ?>" class="form-control" data-inputmask='"mask": "9"' data-mask required>
+            <label>Nama Peminatan</label>
+            <input type="text" name="nama_lab" value="<?= $key['nama_peminatan'] ?>" class="form-control" placeholder="Nama Laboratorium" required>
           </div>
           <div class="form-group">
             <label>Lampiran</label>

@@ -22,7 +22,7 @@
           </div>
           <div class="callout callout-success">
             <h4>Akun Berhasil Dibuat</h4>
-            <p>Dengan NIM <?= $data_peserta['nim']; ?> </p>
+            <p>Dengan Email <strong><?= $data_peserta['email']; ?> </strong></p>
           </div>
 
           <div class="box box-info">
@@ -30,102 +30,91 @@
               <h3 class="box-title">Form <?= $judul; ?></h3>
             </div>
             
-            <?= form_open_multipart('registrasi/verifikasi_tahap2/'.$data_peserta['id_peserta'].'/'.$data_peserta['nim']); ?>
-                <div class="box-body">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Nama Mahasiswa</label>
-                      <input type="text" name="nama_peserta" class="form-control <?= ($validation->hasError('nama_peserta')) ? 'is-invalid' : '' ;?>" 
-                        placeholder="Nama Mahasiswa" value="<?= old('nama_peserta') ;?>" autofocus required>
+            <?= form_open_multipart('registrasi/verifikasi_tahap2/'.$data_peserta['id_peserta'].'/'.$data_peserta['email']); ?>
+              <?= csrf_field() ;?>
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group mb-4">
+                      <label>Nama Lengkap</label>
+                      <input type="text" name="nama" class="form-control <?= ($validation->hasError('nama')) ? 'is-invalid' : '' ;?>" 
+                        placeholder="Nama Mahasiswa" value="<?= old('nama') ;?>" autofocus>
                       <div class="invalid-feedback">
-                          <?= $validation->getError('nama_peserta') ;?>
+                          <?= $validation->getError('nama') ;?>
                       </div>
                     </div>
-                    <div class="form-group">
-                      <label>IPK</label>
-                      <input type="text" name="ipk" class="form-control <?= ($validation->hasError('ipk')) ? 'is-invalid' : '' ;?>" 
-                        placeholder="IPK" value="<?= old('ipk') ;?>" data-inputmask='"mask": "9.99"' data-mask required>
-                      <div class="invalid-feedback">
-                          <?= $validation->getError('ipk') ;?>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label>Tempat Lahir</label>
-                      <input type="text" name="tmp_lahir" class="form-control <?= ($validation->hasError('tmp_lahir')) ? 'is-invalid' : '' ;?>" 
-                        placeholder="Tempat Lahir" value="<?= old('tmp_lahir') ;?>" required>
-                      <div class="invalid-feedback">
-                          <?= $validation->getError('tmp_lahir') ;?>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label>Tanggal Lahir</label>
-                      <input type="text" name="tgl_lahir" class="form-control <?= ($validation->hasError('tgl_lahir')) ? 'is-invalid' : '' ;?>"
-                       id="datepicker" placeholder="Tanggal Lahir" value="<?= old('tgl_lahir') ;?>" required>
-                      <div class="invalid-feedback">
-                          <?= $validation->getError('tgl_lahir') ;?>
-                      </div>
-                    </div>
-                    <div class="form-group">
+                    
+                    <div class="form-group mb-4">
                       <label>Jenis Kelamin</label>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="jenis_kelamin" id="optionsRadios1" value="Laki-laki" checked>
-                          Laki-laki
-                        </label>
+                      <div class="form-check">
+                        <input type="radio" class="form-check-input <?= ($validation->hasError('jenis_kelamin')) ? 'is-invalid' : '' ;?>" 
+                          id="optionsRadio1" name="jenis_kelamin" value="Laki-laki" 
+                          <?php  
+                            if(old('jenis_kelamin') == 'Laki-laki'){
+                              echo 'checked';
+                            }
+                          ?>
+                          >
+                        <label class="form-check-label" for="optionsRadio1">Laki-laki</label>
                       </div>
-                      <div class="radio">
-                        <label>
-                          <input type="radio" name="jenis_kelamin" id="optionsRadios2" value="Perempuan">
-                          Perempuan
-                        </label>
+                      <div class="form-check mb-3">
+                        <input type="radio" class="form-check-input <?= ($validation->hasError('jenis_kelamin')) ? 'is-invalid' : '' ;?>"
+                          id="optionsRadio2" name="jenis_kelamin" value="Perempuan" 
+                          <?php  
+                            if(old('jenis_kelamin') == 'Perempuan'){
+                              echo 'checked';
+                            }
+                          ?>
+                          >
+                        <label class="form-check-label" for="optionsRadio2">Perempuan</label>
+                        <div class="invalid-feedback"><?= $validation->getError('jenis_kelamin') ;?></div>
                       </div>
+                    </div>
+                    <div class="form-group mb-4">
+                      <label>No Hp</label>
+                      <input type="text" name="no_hp" class="form-control <?= ($validation->hasError('no_hp')) ? 'is-invalid' : '' ;?>"
+                      placeholder="No Hp" value="<?= old('no_hp') ;?>">
                       <div class="invalid-feedback">
-                          <?= $validation->getError('password') ;?>
+                        <?= $validation->getError('no_hp') ;?>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>No Hp</label>
-                      <input type="text" name="no_hp" class="form-control <?= ($validation->hasError('no_hp')) ? 'is-invalid' : '' ;?>"
-                       placeholder="No Hp" value="<?= old('no_hp') ;?>" required>
-                      <div class="invalid-feedback">
-                          <?= $validation->getError('no_hp') ;?>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label>Email</label>
-                      <input type="text" name="email" class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : '' ;?>"
-                       placeholder="Email" value="<?= old('email') ;?>" required>
-                      <div class="invalid-feedback">
-                          <?= $validation->getError('email') ;?>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label>Agama</label>
-                      <select class="form-control <?= ($validation->hasError('agama')) ? 'is-invalid' : '' ;?> select2" name="agama" style="width: 100%;" required>
-                        <option selected="selected" value="" disabled>--- Pilih ---</option>
-                        <option value="Islam">Islam</option>
-                        <option value="Kristen">Kristen</option>
-                        <option value="Katolik">Katolik</option>
-                        <option value="Hindu">Hindu</option>
-                        <option value="Budha">Budha</option>
-                        <option value="Konghucu">Konghucu</option>
+                  <div class="col">
+                    <div class="form-group mb-4">
+                      <label>Peminatan</label>
+                      <select class="form-control select2 <?= ($validation->hasError('peminatan')) ? 'is-invalid' : '' ;?>" name="peminatan" style="width: 100%;">
+                        <option selected disabled value="">--- Pilih ---</option>
+                        <?php foreach($peminatan as $key) { ?>
+                        <option value="<?= $key['id_peminatan']; ?>"
+                        <?php  
+                          if(old('peminatan') && old('peminatan') == $key['id_peminatan']){
+                              echo 'selected';
+                          }
+                        ?>
+                        ><?= $key['nama_peminatan']; ?></option>
+                      <?php 
+                      } ?>
                       </select>
                       <div class="invalid-feedback">
-                          <?= $validation->getError('agama') ;?>
+                        <?= $validation->getError('peminatan') ;?>
                       </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group row mb-4">
                       <label>Foto</label>
-                      <input type="file" id="foto" name="foto" required>
-                      <p>.jpg Maxs 200Kb</p>
-                      <div class="invalid-feedback">
-                          <?= $validation->getError('foto') ;?>
+                      <div class="col-sm-4 col-md-3">
+                        <img src="<?= base_url() ;?>/assets/academy/img/web/preview.png" class="img-preview">
+                      </div>
+                      <div class="col-sm-8 col-md-7">
+                        <input type="file" id="foto" name="foto" class="form-control <?= ($validation->hasError('foto')) ? 'is-invalid' : '' ;?>">
+                        <p>.jpg Maxs 500Kb</p>
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('foto') ;?>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
+              </div>
               <div class="modal-footer">
                 <button type="submit" class="btn btn-primary pull-left">Submit</button>
               </div>

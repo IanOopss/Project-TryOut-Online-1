@@ -21,6 +21,7 @@ class Filters extends BaseConfig
         'honeypot' => Honeypot::class,
         'authGuard' => \App\Filters\AuthGuard::class,
         'accessGuard' => \App\Filters\AccessGuard::class,
+        'authCheck' => \App\Filters\AuthCheck::class,
     ];
 
     /**
@@ -33,6 +34,7 @@ class Filters extends BaseConfig
         'before' => [
             // 'honeypot',
             // 'csrf',
+            'authCheck',
         ],
         'after' => [
             'toolbar',
@@ -61,6 +63,7 @@ class Filters extends BaseConfig
      * @var array
      */
     public $filters = [
-        'authGuard' => ['before' => ['admin', 'admin/*', 'panitia', 'peserta']],
+        'authGuard' => ['before' => ['admin', 'admin/*', 'panitia', 'peserta', 'peserta/*']],
+        'accessGuard' => ['before' => ['login', 'login/*', 'registrasi', 'registrasi/*']],
     ];
 }

@@ -26,16 +26,6 @@
             <?= form_open('panitia/edit_password/'.$id_admin, 'class="form-horizontal"'); ?>
               <div class="box-body">
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Password</label>
-
-                  <div class="col-sm-8">
-                    <input type="password"class="form-control" id="password" name="password" value="<?= $password; ?>" placeholder="Password" readonly>
-                  </div>
-                  <div class="col-md-2 ">
-                    <input type="checkbox" onchange="document.getElementById('password').type = this.checked ? 'text' : 'password'"> Tampilkan
-                  </div>
-                </div>
-                <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">New Password</label>
 
                   <div class="col-sm-8">
@@ -46,7 +36,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="inputEmail3" class="col-sm-2 control-label">Comfirm New Password</label>
+                  <label for="inputEmail3" class="col-sm-2 control-label">Confirm New Password</label>
 
                   <div class="col-sm-8">
                     <input type="password" maxlength="15" minlength="8"  class="form-control" id="comfirm_password" name="comfirm_password" placeholder="Comfirm New Password">

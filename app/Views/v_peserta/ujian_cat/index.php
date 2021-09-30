@@ -17,9 +17,8 @@
 
             <div class="callout callout-info">
               <h4><?= $title; ?></h4>
-              <h4>Formasi - <?= $data_lab['nama_lab']; ?></h4>
+              <h4>Formasi - <?= $data_lab['nama_peminatan']; ?></h4>
             </div>
-
             <?php 
               //List Jawaban
               foreach ($tampil_soal as $tampil_s) {

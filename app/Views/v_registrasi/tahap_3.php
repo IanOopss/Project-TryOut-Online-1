@@ -1,6 +1,6 @@
 <?php 
   $id_peserta = $data_peserta['id_peserta'];
-  $nim = $data_peserta['nim'];
+  $email = $data_peserta['email'];
  ?>
 <body class="hold-transition skin-blue layout-top-nav">
   <div class="wrapper">
@@ -19,10 +19,10 @@
           <div class="callout callout-info">
             <h4><?= $judul; ?></h4>
 
-            <p>Unggah Berkas sesuai dengan format!</p>
+            <p>Unggah Bukti Pembayaran sesuai dengan format!</p>
           </div>
           <div class="callout callout-danger">
-            <h4>Format Berkas .pdf Maxs 2 MB</h4>
+            <h4>Format file .jpg, .jpeg, .png Maxs 2 MB</h4>
             <p>Berkas Lamaran Disatukan Dalam Satu Pdf secara berurutan dengan Ukuran Maksimal 2 MB</p>
           </div>
 
@@ -31,22 +31,22 @@
               <h3 class="box-title">Form <?= $judul; ?></h3>
             </div>
             
-            <?= form_open_multipart('registrasi/verifikasi_tahap3/'.$id_peserta.'/'.$nim); ?>
+            <?= form_open_multipart('registrasi/verifikasi_tahap3/'.$id_peserta.'/'.$email); ?>
+              <?= csrf_field() ;?>
                 <div class="box-body">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label>Formasi Lab</label>
-                      <select class="form-control select2" name="id_lab" style="width: 100%;" required>
-                        <option selected="selected" value="">--- Pilih ---</option>
-                        <?php foreach($formasi_lab as $key) { ?>
-                        <option value="<?= $key['id_lab']; ?>"><?= $key['nama_lab']; ?></option>
-                      <?php 
-                      } ?>
-                      </select>
-                    </div>
-                    <div class="form-group">
-                      <label>Berkas Lamaran</label>
-                      <input type="file" id="exampleInputFile" name="berkas_peserta">
+                  <div class="container">
+                    <div class="form-group row mb-4">
+                      <label>Foto</label>
+                      <div class="col-sm-8 col-md-4">
+                        <img src="<?= base_url() ;?>/assets/academy/img/web/preview.png" class="img-preview">
+                      </div>
+                      <div class="col-sm-10 col-md-8">
+                        <input type="file" id="foto" name="foto" class="form-control <?= ($validation->hasError('foto')) ? 'is-invalid' : '' ;?>">
+                        <p>.jpg Maxs 500Kb</p>
+                        <div class="invalid-feedback">
+                            <?= $validation->getError('foto') ;?>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -1,8 +1,6 @@
 <?php 
-foreach ($user as $key) {
-  $id_admin = $key->id_admin;
-  $password = $this->encryption->decrypt($key->password);
-}
+
+$id_admin = session()->get('id_admin');
 
  ?>
 <!-- Content Wrapper. Contains page content -->
@@ -24,9 +22,6 @@ foreach ($user as $key) {
             <div class="box-header with-border">
               <h3 class="box-title">Settings Password</h3>
             </div>
-
-            <?php $this->load->view('layouts/notifikasi'); ?>
-
             <!-- /.box-header -->
             <!-- form start -->
             <?php echo form_open('admin/edit_password/'.$id_admin, 'class="form-horizontal"'); ?>

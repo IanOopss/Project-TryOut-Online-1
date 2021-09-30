@@ -8,14 +8,12 @@ class DataPanitia extends Admin
 {
 	public function index()
 	{
-		$data['title'] 	= "Data Panitia";
-		$data['page'] 		= "data_panitia";
+		$this->data['title'] 	= "Data Panitia";
+		$this->data['page'] 		= "data_panitia";
 		
-		$data['formasi_lab'] = $this->lab->findAll();
-		$data['jenis_soal'] = $this->soal->findAll();
-		$data['data_panitia'] = $this->admin->findPanitia();
+		$this->data['data_panitia'] = $this->admin->findPanitia();
 		
-		return view('v_admin/v_app', $data);
+		return view('v_admin/v_app', $this->data);
 	}
 
 	public function input()

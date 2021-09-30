@@ -31,6 +31,7 @@
                   <tr>
                     <th>No.</th>
                     <th>Nama Soal</th>
+                    <th>Peminatan</th>
                     <th>Jumlah Soal</th>
                     <th>Jumlah Minimal Benar</th>
                     <th>Total Nilai</th>
@@ -41,12 +42,13 @@
                   <tbody>
                     <?php 
                       $no = 1;
-                      foreach ($jenis_soal as $jso) {
+                      foreach ($kategori_soal as $jso) {
                         $id_soal = $jso['id_soal'];
                      ?>
                   <tr>
                     <td><?= $no; ?>.</td>
                     <td><?= $jso['nama_soal']; ?></td>
+                    <td><?= $jso['nama_peminatan']; ?></td>
                     <td><?= $jso['jumlah_soal']; ?></td>
                     <td><?= $jso['minimal_benar']; ?></td>
                     <td><?= $jso['total_nilai']; ?></td>

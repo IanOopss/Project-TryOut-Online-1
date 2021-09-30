@@ -1,4 +1,3 @@
-
 <ul class="sidebar-menu" data-widget="tree">
 
   <li class="header">MAIN NAVIGATION</li>
@@ -65,9 +64,9 @@
       </span>
     </a>
     <ul class="treeview-menu">
-      <?php foreach ($formasi_lab as $lab) {
+      <?php foreach ($peminatan as $p) {
        ?>
-      <li><a href="<?= base_url('Admin/DataPeserta/formasi/'.$lab['id_lab']); ?>"><i class="fa fa-circle-o"></i> <?= $lab['nama_lab']; ?></a></li>
+      <li><a href="<?= base_url('Admin/DataPeserta/formasi/'.$p['id_peminatan']); ?>"><i class="fa fa-circle-o"></i> <?= $p['nama_peminatan']; ?></a></li>
       <?php } ?>
     </ul>
   </li>
@@ -81,9 +80,9 @@
       </span>
     </a>
     <ul class="treeview-menu">
-      <?php foreach ($formasi_lab as $lab) {
+      <?php foreach ($peminatan as $p) {
        ?>
-      <li><a href="<?= base_url('Admin/DataNilai/formasi/'.$lab['id_lab']); ?>"><i class="fa fa-circle-o"></i> <?= $lab['nama_lab']; ?></a></li>
+      <li><a href="<?= base_url('Admin/DataNilai/formasi/'.$p['id_peminatan']); ?>"><i class="fa fa-circle-o"></i> <?= $p['nama_peminatan']; ?></a></li>
       <?php } ?>
     </ul>
   </li>

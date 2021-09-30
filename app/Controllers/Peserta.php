@@ -22,8 +22,12 @@ class Peserta extends BaseController
 		//Nilai Peserta
 		$this->data['data_nilai'] 	= $this->nilai->getNilai($this->id_peserta);
 		
-		$this->data['data_lab'] 	= $this->lab->find($this->data['peserta']['id_lab']);
-		
+		$this->data['data_lab'] 	= $this->peminatan->find($this->data['peserta']['id_peminatan']);
+		$this->data['nama_folder']	= $this->data['peserta']['id_peserta']. '_' .url_title($this->data['peserta']['nama_peserta'], '_', true);
+
+		// Waktu Pengerjaan soal
+		$this->data['waktu_pengerjaan'] = $this->peminatan->find(session()->get('id_peminatan'))['waktu_pengerjaan'];
+
 		return view('v_peserta/v_app', $this->data);
 	}
 	
@@ -34,7 +38,7 @@ class Peserta extends BaseController
 		
 		$this->data['informasi'] 	= $this->informasi->findAll();
 		$this->data['peserta'] 		= $this->peserta->find($this->id_peserta);
-		$this->data['data_lab'] 	= $this->lab->find($this->data['peserta']['id_lab']);
+		$this->data['data_lab'] 	= $this->peminatan->find($this->data['peserta']['id_peminatan']);
 
 		return view('v_peserta/cetak_kartu/index', $this->data);
 	}
@@ -43,10 +47,12 @@ class Peserta extends BaseController
 	{
 		//Cek Id Peserta Pada Tabel Jawaban
 		$cek_peserta = $this->jawaban->where('id_peserta', $this->id_peserta)->first();
+		
 		//Jika ID Peserta Tidak Ada
 		if($cek_peserta == NULL) {
 			//Jenis Soal
-			$soal = $this->soal->findAll();
+			$soal = $this->soal->where('id_peminatan', session()->get('id_peminatan'))->findAll();
+
 			foreach ($soal as $j_soal) {
 				$row[] = $j_soal['id_soal'];
 			}
@@ -62,7 +68,6 @@ class Peserta extends BaseController
 			$panjang = count($row);
 			for ($i=0; $i < $panjang; $i++) { 
 				$id_soal = $jenis_soal[$i];
-				
 				//Pertanyaan
 				$x = $this->pertanyaan->acak_soal($id_soal);
 				foreach ($x as $pertanyaan) {
@@ -79,16 +84,11 @@ class Peserta extends BaseController
 			$list_jawaban = str_replace(",", ":X:N:S,", $list_soal);
 			
 			// Waktu Pengerjaan soal
-			$informasi = $this->informasi->findAll();
+			$waktu_pengerjaan = $this->peminatan->find(session()->get('id_peminatan'))['waktu_pengerjaan'];
 
-			foreach ($informasi as $key) {
-				$waktu_pengerjaan = $key['waktu_pengerjaan'];
-			}
-			
 			$waktu_mulai = date('Y-m-d H:i:s');
 			$waktu_selesai = date('Y-m-d H:i:s', time() + (60 * $waktu_pengerjaan)); 
 			$status_jawaban = "Belum";
-
 			$acak = array(
 				'id_peserta' => $this->id_peserta, 
 				'list_soal' => $list_soal, 
@@ -111,6 +111,10 @@ class Peserta extends BaseController
 	{
 		//Cek Nomor soal
 		$cek_nomor 	= $this->jawaban->where('id_peserta', $this->id_peserta)->first();
+
+		if($cek_nomor['status_jawaban'] == 'Selesai'){
+			return redirect()->to('peserta');
+		}
 
 		$list_soal = $cek_nomor['list_soal'];
 		$list_jawaban = $cek_nomor['list_jawaban'];
@@ -143,7 +147,8 @@ class Peserta extends BaseController
         $this->data['jawaban_peserta'] = $soal_list[1];
        	$this->data['tampil_soal'] = $this->pertanyaan->list_jawaban($id_pertanyaan);
         $this->data['no_soal'] = $no_soal;
-		$this->data['data_lab'] 	= $this->lab->find($this->data['peserta']['id_lab']);
+		$this->data['data_lab'] 	= $this->peminatan->find($this->data['peserta']['id_peminatan']);
+		$this->data['waktu'] = $this->peminatan->find(session()->get('id_peminatan'))['waktu_pengerjaan'];
 		
 		return view('v_peserta/v_app', $this->data);
 	}

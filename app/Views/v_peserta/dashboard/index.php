@@ -11,7 +11,7 @@
     <section class="content">
       <div class="callout callout-info">
         <h4>Selamat Anda Lulus Admistrasi!</h4>
-        <h4><?= $data_lab['nama_lab'] ;?></h4>
+        <h4><?= $data_lab['nama_peminatan'] ;?></h4>
 
         <p>Silakan Cetak Kartu Ujian Untuk Mengikuti Ujian Berbasis CAT</p>
       </div> 
@@ -22,21 +22,16 @@
           <!-- Profile Image -->
           <div class="box box-primary">
             <div class="box-body box-profile">
-              <img class="profile-user-img img-responsive " src="<?= base_url('assets/academy/img/uploads/berkas_peserta/'.$peserta['foto']); ?>" alt="User profile picture">
+              <img class="profile-user-img img-responsive " src="<?= base_url('assets/academy/img/uploads/berkas_peserta/' .$nama_folder. '/' .$peserta['foto']); ?>" alt="User profile picture">
 
               <h3 class="profile-username text-center"><?= $peserta['nama_peserta'] ?></h3>
 
-              <p class="text-muted text-center"><?= $peserta['nim'] ?></p>
-
               <ul class="list-group list-group-unbordered">
-                <li class="list-group-item">
-                  <b>IPK</b> <a class="pull-right"><?= $peserta['ipk'] ?></a>
-                </li>
                 <li class="list-group-item">
                   <b>Email</b> <a class="pull-right"><?= $peserta['email'] ?></a>
                 </li>
                 <li class="list-group-item">
-                  <b>Formasi Lab</b> <a class="pull-right"><?= $data_lab['nama_lab'] ?></a>
+                  <b>Formasi Lab</b> <a class="pull-right"><?= $data_lab['nama_peminatan'] ?></a>
                 </li>
               </ul>
 
@@ -129,7 +124,6 @@
             ";
             
             }else{
-              dd($title);
               //Nilai Ujian CAT Peserta
               echo "
                   <div class='col-md-8'>
@@ -143,7 +137,6 @@
 
                         <ul class='list-group list-group-unbordered'>
                 ";
-                dd($data_nilai);
                 foreach ($data_nilai as $nilai) {
                   echo "
                       <li class='list-group-item'>

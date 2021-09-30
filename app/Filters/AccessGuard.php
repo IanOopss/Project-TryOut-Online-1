@@ -14,10 +14,6 @@ class AccessGuard implements FilterInterface
 				return redirect()->to('Admin/Dashboard');
 			}
 
-			if (session()->get('level_admin') == "2") {
-				return redirect()->to('panitia');
-			}
-
 			if (!session()->get('level_admin')) {
 				return redirect()->to('peserta');
 			}

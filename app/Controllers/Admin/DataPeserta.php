@@ -6,90 +6,75 @@ use App\Controllers\Admin\Admin;
 
 class DataPeserta extends Admin
 {
-	private function berkas($berkas)
+	private function berkas($nama_folder, $berkas)
 	{ 
-		return $link = "
-			<a href='".base_url('/assets/academy/img/uploads/berkas_peserta/'.$berkas)."' target='_blank'>
+		return "
+			<a href='".base_url('/assets/academy/img/uploads/berkas_peserta/' .$nama_folder. '/' .$berkas)."' target='_blank'>
 				<p align='center'><i class='fa fa-file'></i></p>
 			</a>";
 	}
 
-	private function action($id_lab, $id_peserta, $status_verifikasi)
+	private function action($id_peminatan, $id_peserta, $status_verifikasi)
 	{ 
 		if ($status_verifikasi == "Belum") {
 			$link = "
-				<a href='".base_url('Admin/DataPeserta/view/'.$id_lab.'/'.$id_peserta)."' data-toggle='tooltip' data-placement='top' title='View'>
+				<a href='".base_url('Admin/DataPeserta/view/'.$id_peminatan.'/'.$id_peserta)."' data-toggle='tooltip' data-placement='top' title='View'>
 		      		<button type='button' class='btn btn-primary btn-xs'><i class='fa fa-binoculars'></i></button>
 		      	</a>
 
-		      	<a href='".base_url('Admin/DataPeserta/lulus/'.$id_lab.'/'.$id_peserta)."' data-toggle='tooltip' data-placement='top' title='Lulus'>
+		      	<a href='".base_url('Admin/DataPeserta/lulus/'.$id_peminatan.'/'.$id_peserta)."' data-toggle='tooltip' data-placement='top' title='Lulus'>
 		      		<button type='button' class='btn btn-success btn-xs'><i class='fa fa-check-square-o'></i></button>
 		      	</a>
 
-		      	<a href='".base_url('Admin/DataPeserta/tidak_lulus/'.$id_lab.'/'.$id_peserta)."' data-toggle='tooltip' data-placement='top' title='Tidak Lulus'>
+		      	<a href='".base_url('Admin/DataPeserta/tidak_lulus/'.$id_peminatan.'/'.$id_peserta)."' data-toggle='tooltip' data-placement='top' title='Tidak Lulus'>
 		      		<button type='button' class='btn btn-danger btn-xs'><i class='fa  fa-close'></i></button>
 		      	</a>";
 		}
 		elseif ($status_verifikasi == "Lulus"){
 			$link = "
-				<a href='".base_url('Admin/DataPeserta/view/'.$id_lab.'/'.$id_peserta)."' data-toggle='tooltip' data-placement='top' title='View'>
+				<a href='".base_url('Admin/DataPeserta/view/'.$id_peminatan.'/'.$id_peserta)."' data-toggle='tooltip' data-placement='top' title='View'>
 		      		<button type='button' class='btn btn-success btn-xs'><i class='fa fa-binoculars'></i></button>
-		      	</a>
-	   		 ";
-
+		      	</a>";
 		}
 		else{
 			$link = "
-				<a href='".base_url('Admin/DataPeserta/view/'.$id_lab.'/'.$id_peserta)."' data-toggle='tooltip' data-placement='top' title='View'>
+				<a href='".base_url('Admin/DataPeserta/view/'.$id_peminatan.'/'.$id_peserta)."' data-toggle='tooltip' data-placement='top' title='View'>
 		      		<button type='button' class='btn btn-warning btn-xs'><i class='fa fa-binoculars'></i></button>
-		      	</a>
-	   		 ";
+		      	</a>";
 		}
 		
 	    return $link;
 	}
 
-	public function formasi($id_lab)
+	public function formasi($id_peminatan)
 	{
-		$data['title'] 	= "Data Peserta";
-		$data['page'] 		= "data_peserta";
-
-		//Side Menu
-		$data['formasi_lab'] = $this->lab->findAll();
-		$data['jenis_soal']  = $this->soal->findAll();
+		$this->data['title'] 	= "Data Peserta";
+		$this->data['page'] 		= "data_peserta";
 
 		// Nama Formasi Lab
-		$data['cek_lab'] = $this->lab->where('id_lab', $id_lab)->first();
+		$this->data['cek_peminatan'] = $this->peminatan->where('id_peminatan', $id_peminatan)->first();
 		
-		$data['kode1'] = $id_lab;
+		$this->data['kode1'] = $id_peminatan;
 		
-		return view('v_admin/v_app', $data);
+		return view('v_admin/v_app', $this->data);
 	}
 
-	public function view($id_lab, $id_peserta)
+	public function view($id_peminatan, $id_peserta)
 	{
-		$data['title'] 	= "Data Peserta";
-		$data['page'] 	= "view_peserta";
-
-		//Side Menu
-		$data['formasi_lab'] = $this->lab->findAll();
-		$data['jenis_soal'] 	= $this->soal->findAll();
+		$this->data['title'] 	= "Data Peserta";
+		$this->data['page'] 	= "view_peserta";
 
 		// Nama Formasi Lab
-		$data['cek_lab'] = $this->lab->where('id_lab', $id_lab)->first();
+		$this->data['cek_lab'] = $this->peminatan->where('id_peminatan', $id_peminatan)->first();
 
 		// View Peserta
-		$data['view_peserta'] = $this->peserta->where('id_peserta', $id_peserta)->first();
+		$this->data['view_peserta'] = $this->peserta->where('id_peserta', $id_peserta)->first();
 
-		return view('v_admin/v_app', $data);
+		return view('v_admin/v_app', $this->data);
 	}
 
-	public function lulus($id_lab, $id_peserta)
+	public function lulus($id_peminatan, $id_peserta)
 	{
-		$cek_formasi =  $this->lab->where('id_lab', $id_lab)->first();
-		
-		$jumlah_lulus_adm = $cek_formasi['jumlah_lulus_adm'];
-		
 		$email_peserta = $this->peserta->find($id_peserta)['email'];
 		
 		$email = \Config\Services::email();
@@ -102,23 +87,17 @@ class DataPeserta extends Admin
 		$email->setMessage('Selamat anda telah lulus verifikasi pendaftaran, anda dapat melakukan ujian tryout pada tanggal XX-XX-XXXX.');
 
 		$email->send();
-		
-		$lab = [
-			'jumlah_lulus_adm' => $jumlah_lulus_adm+1
-		];
 
-		$this->lab->update($id_lab, $lab);
-		
 		$data = [
 			'status_verifikasi' => "Lulus"
 		];
-
+		
 		$this->peserta->update($id_peserta, $data);
 
-		return redirect()->to('Admin/DataPeserta/formasi/'.$id_lab);
+		return redirect()->to('Admin/DataPeserta/formasi/'.$id_peminatan);
 	}
 
-	public function tidak_lulus($id_lab, $id_peserta)
+	public function tidak_lulus($id_peminatan, $id_peserta)
 	{
 		$data = [
 			'status_verifikasi' => "Tidak Lulus"
@@ -126,75 +105,54 @@ class DataPeserta extends Admin
 
 		$this->peserta->update($id_peserta, $data);
 
-		return redirect()->to('Admin/DataPeserta/formasi/'.$id_lab);
+		return redirect()->to('Admin/DataPeserta/formasi/'.$id_peminatan);
 	}
 
-	public function cetak($id_lab)
+	public function cetak($id_peminatan)
 	{	
-		$data['title'] 	= "Data Peserta Report";
-		$data['page'] 		= "cetak_peserta";
-
-		//Side Menu
-		$data['formasi_lab'] = $this->lab->findAll();
-		$data['jenis_soal'] 	= $this->soal->findAll();
+		$this->data['title'] 	= "Data Peserta Report";
+		$this->data['page'] 		= "cetak_peserta";
 
 		//Nama Formasi Lab
-		$data['cek_lab'] = $this->lab->where('id_lab', $id_lab)->first();
+		$this->data['cek_lab'] = $this->peminatan->where('id_peminatan', $id_peminatan)->first();
 		
 		// Cetak
-		$data['cetak_peserta'] = $this->peserta->where('id_lab', $id_lab)->findAll();
+		$this->data['cetak_peserta'] = $this->peserta->where('id_peminatan', $id_peminatan)->findAll();
 		
-		return view('v_admin/data_peserta/v_cetak', $data);
+		return view('v_admin/data_peserta/v_cetak', $this->data);
 	}
-
-	public function download($id_lab, $berkas){
-		$nama_files = $berkas; 
-		$download = 'uploads/berkas_peserta/';
-		if (!file_exists($download.$nama_files)) {
-		  $error =  "<h3>Access forbidden!</h3>
-		      <p> Anda tidak diperbolehkan mendownload file ini.</p>";
-		  $this->session->set_flashdata('warning', $error);
-		  return redirect()->to('Admin/DataPeserta/formasi/'.$id_lab);
-		}else{
-
-		header("Content-Type: octet/stream");
-  		header("Content-Disposition: attachment; filename=\"".$nama_files."\"");
-  		$fp = fopen($download.$nama_files, "r");
-  		$data = fread($fp, filesize($download.$nama_files));
-  		fclose($fp);
-  		print $data;
-  		}
-	}
-
+	
 	/*
 	| -------------------------------------------------------------------
 	| SERVER SIDE -------------------------------------------------------
 	| -------------------------------------------------------------------
 	*/
 
-	public function ajax_get_peserta($id_lab){
-		$list = $this->peserta->where('id_lab', $id_lab)->findAll();
+	public function ajax_get_peserta($id_peminatan){
+		$list = $this->peserta->where('id_peminatan', $id_peminatan)->findAll();
 		$data = array();
 		$no = $_POST['start'];
 		
 		foreach ($list as $personal) {
 			$no++;
+			$nama_folder = $personal['id_peserta']. '_' .url_title($personal['nama_peserta'], '_', true);
+
 			$row = array();
 			$row[] = $no;
-			$row[] = $personal['nim'];
 			$row[] = $personal['nama_peserta'];
-			$row[] = $personal['ipk'];
-			$row[] = $this->berkas($personal['berkas_peserta']);
+			$row[] = $personal['email'];
+			$row[] = $personal['id_peminatan'];
+			$row[] = $this->berkas($nama_folder, $personal['bukti_pembayaran']);
 			$row[] = tgl_indonesia($personal['tgl_selesai_pendaftaran']);
 			$row[] = $personal['status_verifikasi'];
-			$row[] = $this->action($id_lab, $personal['id_peserta'], $personal['status_verifikasi']);
+			$row[] = $this->action($id_peminatan, $personal['id_peserta'], $personal['status_verifikasi']);
 
 			$data[] = $row; 
 		}
 
 		$output = array(
 			"draw" 				=> $_POST['draw'],
-			"recordsTotal" 		=> $this->peserta->where('id_lab', $id_lab)->countAllResults(),
+			"recordsTotal" 		=> $this->peserta->where('id_peminatan', $id_peminatan)->countAllResults(),
 			"recordsFiltered" 	=> '10',
 			"data" 				=> $data,
 		);

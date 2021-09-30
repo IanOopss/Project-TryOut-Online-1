@@ -8,18 +8,19 @@ class JenisSoal extends Admin
 {   
     public function index()
 	{
-		$data['title'] 	= "Jenis Soal";
-		$data['page'] 		= "jenis_soal";
+		$this->data['title'] 	= "Jenis Soal";
+		$this->data['page'] 		= "jenis_soal";
 		
-		$data['formasi_lab'] = $this->lab->findAll();
-		$data['jenis_soal'] = $this->soal->findAll();
-
-		return view('v_admin/v_app', $data);
+		$this->data['kategori_soal'] = $this->soal->joinPeminatan();
+		$this->data['tbl_peminatan'] = $this->peminatan->findAll();
+		
+		return view('v_admin/v_app', $this->data);
 	}
 
 	public function inputSoal()
 	{
 		$nama_soal 			= ucwords($this->request->getVar('nama_soal'));
+		$peminatan	 		= $this->request->getVar('peminatan');
 		$jumlah_soal	 	= $this->request->getVar('jumlah_soal');
 		$minimal_benar	 	= $this->request->getVar('minimal_benar');
 		
@@ -30,6 +31,7 @@ class JenisSoal extends Admin
 
         $data = [
             'nama_soal'     => $nama_soal,
+            'id_peminatan'  => $peminatan,
             'jumlah_soal' 	=> $jumlah_soal,
             'minimal_benar' => $minimal_benar,
             'total_nilai' 	=> $jumlah_soal*5,
@@ -44,6 +46,7 @@ class JenisSoal extends Admin
 	public function editSoal($id)
 	{
 		$nama_soal 			= ucwords($this->request->getVar('nama_soal'));
+		$peminatan	 		= $this->request->getVar('peminatan');
 		$jumlah_soal	 	= $this->request->getVar('jumlah_soal');
 		$minimal_benar	 	= $this->request->getVar('minimal_benar');
 		
@@ -54,6 +57,7 @@ class JenisSoal extends Admin
         
         $data = [
             'nama_soal'  => $nama_soal,
+            'id_peminatan'  => $peminatan,	
             'jumlah_soal' 	=> $jumlah_soal,
             'minimal_benar' 	=> $minimal_benar,
             'total_nilai' 	=> $jumlah_soal*5,

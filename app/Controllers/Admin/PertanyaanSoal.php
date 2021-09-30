@@ -8,7 +8,7 @@ class PertanyaanSoal extends Admin
 {   
     private function action($id_soal,$id_pertanyaan)
 	{ 
-		return $link = "
+		return "
 			<a href='".base_url('Admin/PertanyaanSoal/editSoal/'.$id_soal.'/'.$id_pertanyaan)."' data-toggle='tooltip' data-placement='top' title='Edit'>
 	      		<button type='button' class='btn btn-success btn-xs'><i class='fa fa-edit'></i></button>
 	      	</a>
@@ -20,19 +20,15 @@ class PertanyaanSoal extends Admin
 
 	public function soal($id_soal)
 	{
-		$data['title'] 	= "Soal";
-		$data['page'] 	= "pertanyaan_soal";
-
-		//Sidebar
-		$data['formasi_lab'] = $this->lab->findAll();
-		$data['jenis_soal'] = $this->soal->findAll(); 
+		$this->data['title'] 	= "Soal";
+		$this->data['page'] 	= "pertanyaan_soal";
 		
-		$data['kode1'] = $id_soal;
+		$this->data['kode1'] = $id_soal;
 
-		$data['nama_soal'] = $this->soal->find($id_soal);
-		$data['data_pertanyaan'] = $this->pertanyaan->where('id_soal', $id_soal)->countAllResults();
+		$this->data['nama_soal'] = $this->soal->find($id_soal);
+		$this->data['data_pertanyaan'] = $this->pertanyaan->where('id_soal', $id_soal)->countAllResults();
 
-		return view('v_admin/v_app', $data);
+		return view('v_admin/v_app', $this->data);
 	}
 
 	public function inputSoal($id_soal)
@@ -63,18 +59,15 @@ class PertanyaanSoal extends Admin
 
 	public function editSoal($id_soal,$id_pertanyaan)
 	{
-		$data['title'] 	= "Edit Soal";
-		$data['page'] 		= "pertanyaan_edit";
-
-		$data['formasi_lab'] = $this->lab->findAll();
-		$data['jenis_soal'] = $this->soal->findAll();
+		$this->data['title'] 	= "Edit Soal";
+		$this->data['page'] 		= "pertanyaan_edit";
 		
-		$data['kode1'] = $id_soal;
+		$this->data['kode1'] = $id_soal;
 
-		$data['nama_soal'] = $this->soal->where('id_soal', $id_soal)->first();
-		$data['tampil_edit'] = $this->pertanyaan->where('id_pertanyaan', $id_pertanyaan)->first();
+		$this->data['nama_soal'] = $this->soal->where('id_soal', $id_soal)->first();
+		$this->data['tampil_edit'] = $this->pertanyaan->where('id_pertanyaan', $id_pertanyaan)->first();
 
-		return view('v_admin/v_app', $data);
+		return view('v_admin/v_app', $this->data);
 	}
 
 	public function edit_proses($id_soal,$id_pertanyaan)

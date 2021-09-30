@@ -8,14 +8,12 @@ class InformasiPendaftaran extends Admin
 {
 	public function index()
 	{
-		$data['title'] 	= "Informasi Pendaftaran";
-		$data['page'] 		= "informasi_pendaftaran";
+		$this->data['title'] 	= "Informasi Pendaftaran";
+		$this->data['page'] 		= "informasi_pendaftaran";
 		
-		$data['formasi_lab']	= $this->lab->findAll();
-		$data['jenis_soal'] 	= $this->soal->findAll();
-		$data['informasi'] 	    = $this->informasi->findAll();
-
-		return view('v_admin/v_app', $data);
+		$this->data['informasi'] 	    = $this->informasi->findAll();
+		
+		return view('v_admin/v_app', $this->data);
 	}
 
 	public function editInformasi($id)

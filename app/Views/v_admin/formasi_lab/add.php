@@ -10,12 +10,8 @@
       <?= csrf_field() ;?>
         <div class="box-body">
           <div class="form-group">
-            <label>Nama Laboratorium</label>
+            <label>Nama Peminatan</label>
             <input type="text" name="nama_lab" class="form-control" placeholder="Nama Laboratorium" required autofocus>
-          </div>
-          <div class="form-group">
-            <label>Jumlah Formasi</label>
-            <input type="text" name="jumlah_formasi" class="form-control" data-inputmask='"mask": "9"' data-mask required>
           </div>
           <div class="form-group">
             <label>Lampiran</label>

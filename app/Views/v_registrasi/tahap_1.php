@@ -8,36 +8,29 @@
     <p class="login-box-msg"><?= $title; ?></p>
     <div class="callout callout-info">
       <h4><?= $judul; ?></h4>
-
-      <p>Pendaftaran Hanya Bisa Dilakukan Oleh Mahasiswa Jurusan Teknik Informatika Angkatan 2018</p>
-      <p>Contoh: NIM Mahasiswa 201846001</p>
-      <p>2017 = Angkatan. 46 = Jurusan Teknik Informatika. 001 = Nomor Mahasiswa</p>
+      <p>Daftarkan dirimu agar dapat mengikuti Tryout Online</p>
     </div>
-    
     <?= form_open('registrasi/verifikasi_tahap1'); ?>
     <?= csrf_field() ;?>
-      <div class="form-group has-feedback">
-        <input type="text" class="form-control <?= ($validation->hasError('nim')) ? 'is-invalid' : '' ;?>" 
-          maxlength="9" minlength="9" name="nim"  placeholder="NIM" data-inputmask='"mask": "999999999"' 
-          data-mask value="<?= old('nim') ;?>" autofocus required>
+      <div class="form-group row mb-4">
+        <input type="email" class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : '' ;?>" 
+           name="email" placeholder="Email" value="<?= old('email') ;?>" autofocus>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
         <div class="invalid-feedback">
-            <?= $validation->getError('nim') ;?>
+            <?= $validation->getError('email') ;?>
         </div>
       </div>
-      <div class="form-group has-feedback">
+      <div class="form-group row mb-4">
         <input type="password" class="form-control <?= ($validation->hasError('password')) ? 'is-invalid' : '' ;?>" 
-          maxlength="15" minlength="8" name="password" placeholder="Password" value="<?= old('password') ;?>" 
-          required>
+          name="password" placeholder="Password" value="<?= old('password') ;?>">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         <div class="invalid-feedback">
             <?= $validation->getError('password') ;?>
         </div>
       </div>
-      <div class="form-group has-feedback">
+      <div class="form-group row mb-4">
         <input type="password" class="form-control <?= ($validation->hasError('confirm_password')) ? 'is-invalid' : '' ;?>" 
-        maxlength="15" minlength="8" name="confirm_password" placeholder="Confirm Password" value="<?= old('confirm_password') ;?>"  
-        required>
+        name="confirm_password" placeholder="Confirm Password" value="<?= old('confirm_password') ;?>" >
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         <div class="invalid-feedback">
             <?= $validation->getError('confirm_password') ;?>

@@ -5,7 +5,7 @@
   
   
   $id_peserta = $data_peserta['id_peserta'];
-  $nim = $data_peserta['nim'];
+  $email = $data_peserta['email'];
   $nama_peserta = $data_peserta['nama_peserta'];
  ?>
 <body class="hold-transition skin-blue layout-top-nav">
@@ -29,12 +29,11 @@
 
             <p>Anda Berhasil Melakuan Pendaftaran <?= $nama_kegiatan; ?>!</p>
             <p>Untuk Mengetahui Pengumuman Lulus Adminitrasi!</p>
-            <p>Silakan Login dengan menggunakan NIM dan Password Anda !</p>
+            <p>Silakan Login dengan menggunakan Email dan Password Anda !</p>
           </div>
 
           <div class="callout callout-success">
-            <h4>NIM : <?= $nim; ?></h4>
-            <h4>NAMA : <?= $nama_peserta; ?></h4>
+            <h4>Email : <?= $email; ?></h4>
           </div>
 
           <a href="<?= base_url('/'); ?>">

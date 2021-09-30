@@ -18,7 +18,6 @@ if ($page == 'login_panitia') {
 }
 
 echo $this->include('layouts/foot');
-
 ?>
 
 

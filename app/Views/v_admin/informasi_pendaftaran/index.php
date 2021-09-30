@@ -1,5 +1,4 @@
-
- <!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -59,11 +58,9 @@
                       ?>
                     </td>
                     <td>
-
                       <a data-toggle="tooltip" data-placement="top" title="Edit">
                       <button type="button" class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModalEdit<?= $id_informasi; ?>"><i class="fa fa-edit"></i></button>
                       </a>
-
                     </td>
                   </tr>
                   <?php 

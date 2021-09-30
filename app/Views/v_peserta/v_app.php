@@ -3,7 +3,6 @@ echo $this->include('layouts/head');
 
 foreach ($informasi as $key) {
   $tgl_ujian_cat = $key['tgl_ujian_cat'];
-  $waktu_pengerjaan = $key['waktu_pengerjaan'];
 }
 
 $status_verifikasi = $peserta['status_verifikasi'];
@@ -50,7 +49,7 @@ $tgl_sekarang = date('Y-m-d');
 
                   <p>
                     <?= $peserta['nama_peserta'] ?>
-                    <small><?= $peserta['nim'] ?></small>
+                    <small><?= $peserta['email'] ?></small>
                   </p>
                 </li>
                 

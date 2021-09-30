@@ -7,10 +7,10 @@ class Panitia extends BaseController
         $data['title'] 	= "Dashboard Panitia";
 		$data['page'] 		= "dashboard_panitia";
 
-		$data['formasi_lab'] = $this->lab->findAll();
+		$data['formasi_lab'] = $this->peminatan->findAll();
 		$data['jenis_soal'] = $this->soal->findAll();
 
-		$data['lab'] = $this->lab->countAllResults();
+		$data['lab'] = $this->peminatan->countAllResults();
 		$data['soal'] = $this->soal->countAllResults();
 		$data['pertanyaan'] = $this->pertanyaan->countAllResults();
 		$data['peserta'] = $this->peserta->countAllResults();
@@ -23,10 +23,8 @@ class Panitia extends BaseController
 		$data['title'] 	= "Panitia Settings";
 		$data['page'] 		= "panitia_edit";
 		
-		$data['formasi_lab'] = $this->lab->findAll();
+		$data['formasi_lab'] = $this->peminatan->findAll();
 		$data['jenis_soal'] = $this->soal->findAll();
-
-        $data['password'] = $this->encryption->decrypt(base64_decode(session()->get('password')));
 		
 		return view('v_admin/v_app', $data);
 	}

@@ -13,7 +13,7 @@ use Psr\Log\LoggerInterface;
 use App\Models\M_admin;
 use App\Models\M_informasi;
 use App\Models\M_jawaban;
-use App\Models\M_lab;
+use App\Models\M_peminatan;
 use App\Models\M_nilai;
 use App\Models\M_pertanyaan;
 use App\Models\M_peserta;
@@ -64,7 +64,7 @@ class BaseController extends Controller
 		$this->admin 		= new M_admin();
 		$this->informasi 	= new M_informasi();
 		$this->jawaban 	    = new M_jawaban();
-		$this->lab 		    = new M_lab();
+		$this->peminatan    = new M_peminatan();
 		$this->nilai 		= new M_nilai();
 		$this->pertanyaan	= new M_pertanyaan();
 		$this->peserta		= new M_peserta();

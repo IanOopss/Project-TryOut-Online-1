@@ -7,13 +7,10 @@ use App\Controllers\Admin\Admin;
 class Formasilab extends Admin {
 	public function index()
 	{
-		$data['title'] 	= "Formasi Lab";
-		$data['page'] 		= "formasi_lab";
-
-		$data['formasi_lab'] = $this->lab->findAll();
-		$data['jenis_soal'] = $this->soal->findAll();
+		$this->data['title'] 	= "Formasi Lab";
+		$this->data['page'] 		= "formasi_lab";
 		
-		return view('v_admin/v_app', $data);
+		return view('v_admin/v_app', $this->data);
 	}
 
 	public function inputLab()
@@ -27,12 +24,12 @@ class Formasilab extends Admin {
         $lampiran->move('assets/academy/img/uploads/', $file_name);
         
         $data = [
-            'nama_lab'  => $nama_lab,
-            'jumlah_formasi' 	=> $jumlah_formasi,
-            'lampiran' => $file_name,
+            'nama_lab'  	 => $nama_lab,
+            'jumlah_peserta' => $jumlah_peserta,
+            'lampiran' 		 => $file_name,
         ];
 
-        $this->lab->insert($data);
+        $this->peminatan->insert($data);
 
         return redirect()->to('Admin/FormasiLab');
 	}
@@ -43,7 +40,7 @@ class Formasilab extends Admin {
 		$jumlah_formasi 	= $this->request->getVar('jumlah_formasi');
         $lampiran           = $this->request->getFile('lampiran');
 
-        $old_data = $this->lab->find($id);
+        $old_data = $this->peminatan->find($id);
         $old_file = $old_data['lampiran'];
         
         if($nama_lab != $old_data['nama_lab'] && $lampiran->getError() == 4) {
@@ -67,35 +64,16 @@ class Formasilab extends Admin {
             'lampiran'       => $file_name,
         );
         
-        $this->lab->update($id, $data);
+        $this->peminatan->update($id, $data);
 
         return redirect()->to('Admin/FormasiLab');
 	}
 
 	public function deleteLab($id)
 	{
-        $dokumen = $this->lab->select('lampiran')->find($id);
+        $dokumen = $this->peminatan->select('lampiran')->find($id);
         unlink('assets/academy/img/uploads/' .$dokumen['lampiran']);
-		$this->lab->delete($id);
+		$this->peminatan->delete($id);
 		return redirect()->to('Admin/FormasiLab');
-	}
-
-	public function download($nama){
-		$nama_files = $nama; 
-		$download = 'uploads/pengumuman/';
-		if (!file_exists($download.$nama_files)) {
-		  $error =  "<h3>Access forbidden!</h3>
-		      <p> Anda tidak diperbolehkan mendownload file ini.</p>";
-		  $this->session->set_flashdata('warning', $error);
-		  return redirect()->to('Admin/FormasiLab');
-		}else{
-
-		header("Content-Type: octet/stream");
-  		header("Content-Disposition: attachment; filename=\"".$nama_files."\"");
-  		$fp = fopen($download.$nama_files, "r");
-  		$data = fread($fp, filesize($download.$nama_files));
-  		fclose($fp);
-  		print $data;
-  		}
 	}
 }

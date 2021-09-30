@@ -35,21 +35,13 @@ $routes->get('/', 'Home::index');
 
 // SuperAdmin routes
 $routes->group("admin", ["filter" => "accessGuard"], function ($routes) {
-    $routes->get("/", "admin\dashboard::index");
-});
-
-// Admin routes
-$routes->group("panitia", ["filter" => "accessGuard"], function ($routes) {
-    $routes->get("/", "panitia::index");
+    $routes->get("/", "admin::index");
 });
 
 // User routes
-$routes->group("peserta", ["filter" => "accessGuard"], function ($routes) {
-    $routes->get("/", "peserta::index");
-});
-
-$routes->get('login', 'login::index', ["filter" => "accessGuard"]);
-$routes->get('login/panitia', 'login::panitia', ["filter" => "accessGuard"]);
+// $routes->group("peserta", ["filter" => "accessGuard"], function ($routes) {
+//     $routes->get("/", "peserta::index");
+// });
 
 /*
  * --------------------------------------------------------------------

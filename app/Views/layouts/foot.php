@@ -1,3 +1,4 @@
+<script src="<?= base_url(); ?>/assets/academy/js/script.js"></script>
 <!-- jQuery 3 -->
 <script src="<?= base_url(); ?>/assets/adminlte/bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->

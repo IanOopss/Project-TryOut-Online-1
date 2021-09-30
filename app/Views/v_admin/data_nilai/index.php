@@ -1,13 +1,13 @@
 <?php 
-  $id_lab = $cek_lab['id_lab'];
-  $nama_lab = $cek_lab['nama_lab'];
+  $id_peminatan = $cek_peminatan['id_peminatan'];
+  $nama_peminatan = $cek_peminatan['nama_peminatan'];
 ?>
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <?= $title." Formasi ".$nama_lab; ?>
+        <?= $title." Formasi ".$nama_peminatan; ?>
       </h1>
     </section>
 
@@ -18,7 +18,7 @@
           
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Tabel <?= $title." Formasi ".$nama_lab; ?></h3>
+              <h3 class="box-title">Tabel <?= $title." Formasi ".$nama_peminatan; ?></h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
