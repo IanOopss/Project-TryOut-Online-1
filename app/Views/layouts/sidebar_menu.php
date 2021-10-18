@@ -23,10 +23,10 @@
     </a>
   </li>
 
-  <li class="<?= ($page == 'formasi_lab') ? "treeview active" : ''  ?>">
-    <a href="<?= base_url('Admin/FormasiLab'); ?>">
+  <li class="<?= ($page == 'peminatan') ? "treeview active" : ''  ?>">
+    <a href="<?= base_url('Admin/Peminatan'); ?>">
       <i class="fa fa-university"></i>
-      <span>Formasi Lab</span>
+      <span>Peminatan</span>
     </a>
   </li>
 

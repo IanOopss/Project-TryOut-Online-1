@@ -12,26 +12,23 @@
     </div>
     <?= form_open('registrasi/verifikasi_tahap1'); ?>
     <?= csrf_field() ;?>
-      <div class="form-group row mb-4">
+      <div class="form-group mb-4">
         <input type="email" class="form-control <?= ($validation->hasError('email')) ? 'is-invalid' : '' ;?>" 
-           name="email" placeholder="Email" value="<?= old('email') ;?>" autofocus>
-        <span class="glyphicon glyphicon-user form-control-feedback"></span>
+           name="email" placeholder="Email" value="<?= old('email') ;?>" autofocus autocomplete="off">
         <div class="invalid-feedback">
             <?= $validation->getError('email') ;?>
         </div>
       </div>
-      <div class="form-group row mb-4">
+      <div class="form-group mb-4">
         <input type="password" class="form-control <?= ($validation->hasError('password')) ? 'is-invalid' : '' ;?>" 
           name="password" placeholder="Password" value="<?= old('password') ;?>">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         <div class="invalid-feedback">
             <?= $validation->getError('password') ;?>
         </div>
       </div>
-      <div class="form-group row mb-4">
+      <div class="form-group mb-4">
         <input type="password" class="form-control <?= ($validation->hasError('confirm_password')) ? 'is-invalid' : '' ;?>" 
         name="confirm_password" placeholder="Confirm Password" value="<?= old('confirm_password') ;?>" >
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
         <div class="invalid-feedback">
             <?= $validation->getError('confirm_password') ;?>
         </div>

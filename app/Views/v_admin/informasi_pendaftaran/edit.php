@@ -12,7 +12,6 @@
             $tgl1 = ubah_tgl2($key['tgl_pendaftaran']);
             $tgl2 = ubah_tgl2($key['tgl_tutup']);
             $tgl3 = $tgl1." - ".$tgl2;
-            $tgl4 = ubah_tgl2($key['tgl_lulus_adm']);
             $tgl5 = ubah_tgl2($key['tgl_ujian_cat']);
          ?>
         <div class="box-body">
@@ -26,16 +25,8 @@
             <input type="text" name="tgl_pendaftaran" value="<?= $tgl3; ?>" class="form-control" id="reservation" required>
           </div>
           <div class="form-group">
-            <label>Tanggal Lulus Administrasi</label>
-            <input type="text" name="tgl_lulus_adm" value="<?= $tgl4; ?>" class="form-control" id="datepicker" required>
-          </div>
-          <div class="form-group">
             <label>Tanggal Ujian CAT</label>
             <input type="text" name="tgl_ujian_cat" value="<?= $tgl5; ?>" class="form-control" id="datepicker2" required>
-          </div>
-          <div class="form-group">
-            <label>Waktu Pengerjaan Soal</label>
-            <input type="text" name="waktu_pengerjaan" placeholder="Ex. 90 Menit" value="<?= $key['waktu_pengerjaan']; ?>" class="form-control" required>
           </div>
           <div class="form-group">
             <label>Alur Pendaftaran</label>

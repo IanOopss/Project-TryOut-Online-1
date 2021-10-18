@@ -28,11 +28,7 @@
           </div>
           <div class="form-group">
             <label>Jumlah Soal</label>
-            <input type="text" name="jumlah_soal" class="form-control" data-inputmask='"mask": "99"' data-mask required>
-          </div>
-          <div class="form-group">
-            <label>Jumlah Soal Minimal Benar</label>
-            <input type="text" name="minimal_benar" class="form-control" data-inputmask='"mask": "99"' data-mask required>
+            <input type="text" name="jumlah_soal" class="form-control" required>
           </div>
         </div>
       <div class="modal-footer">

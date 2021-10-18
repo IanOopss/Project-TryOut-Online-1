@@ -28,9 +28,8 @@
                     <th>No.</th>
                     <th>Nama Peserta</th>
                     <?php 
-                      foreach ($jenis_soal as $jen) {
-                        $id_soal = $jen['id_soal'];
-                        echo "<th>".$jen['nama_soal']."</th>";
+                      foreach ($matpel_peminatan as $mt) {
+                        echo "<th>".$mt['nama_soal']."</th>";
                       }
                      ?>
                   </tr>

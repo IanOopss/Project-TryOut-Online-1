@@ -10,7 +10,6 @@ if ($page == 'tahap_1') {
 		}
 
 		$tgl_sekarang = date('Y-m-d');
-
 		if ($tgl_sekarang<$tgl_pendaftaran) {
 			include 'registrasi_belum.php';
 		}

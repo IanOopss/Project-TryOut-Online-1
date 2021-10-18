@@ -1,0 +1,661 @@
+CRITICAL - 2021-09-29 09:03:18 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('2')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 09:03:21 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('2')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 09:04:44 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('2')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 09:05:24 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('2')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 09:05:41 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 09:05:43 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('75')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 09:05:45 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 09:05:47 --> Undefined index: id_lab
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 25, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 09:05:49 --> Undefined index: id_lab
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 25, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 09:06:05 --> Undefined index: nama_soal
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(153): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 153, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 14:09:03 --> Undefined index: id_lab
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 25, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:09:34 --> Undefined index: id_lab
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 25, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:09:51 --> Undefined index: id_lab
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 25, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:09:53 --> Undefined index: id_lab
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 25, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:10:10 --> Undefined index: id_lab
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 25, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:10:53 --> Undefined index: nama_soal
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(153): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 153, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 14:11:20 --> Undefined index: nama_soal
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(153): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 153, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 14:12:26 --> Undefined index: nama_soal
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 14:13:37 --> Undefined index: nama_soal
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(154): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 154, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 14:14:36 --> Illegal string offset 'status_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(78): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 78, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 14:16:25 --> Illegal string offset 'jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(197): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 197, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:17:53 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:18:02 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:18:08 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:18:18 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:18:29 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:18:39 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:18:54 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:18:57 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:19:04 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:19:09 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:19:41 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:19:51 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 177, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:21:10 --> Illegal string offset 'list_jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 178, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:26:34 --> There is no data to update.
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(1570): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array)
+#4 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('2')
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-09-29 14:26:41 --> There is no data to update.
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(1570): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array)
+#4 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-09-29 14:27:06 --> There is no data to update.
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(1570): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array)
+#4 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-09-29 14:41:49 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray('id_peserta =21', 'update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, 'id_peserta =21')
+#2 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array, 'id_peserta =21')
+#3 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-09-29 14:45:09 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray('id_peserta = 21', 'update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, 'id_peserta = 21')
+#2 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array, 'id_peserta = 21')
+#3 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-09-29 14:46:03 --> Undefined variable: id
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(249): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 249, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 14:47:36 --> There is no data to update.
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(1570): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array)
+#4 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-09-29 14:47:47 --> There is no data to update.
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(1570): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(NULL, 'update')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, NULL)
+#3 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array)
+#4 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-09-29 14:48:06 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray('id_peserta', 'update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, 'id_peserta')
+#2 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array, 'id_peserta', '21')
+#3 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-09-29 14:48:18 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray('id_peserta', 'update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, 'id_peserta')
+#2 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array, 'id_peserta')
+#3 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-09-29 14:48:29 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray('id_peserta', 'update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, 'id_peserta')
+#2 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array, 'id_peserta', '21')
+#3 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-09-29 14:49:03 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray('id_peserta = 21', 'update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, 'id_peserta = 21')
+#2 C:\xampp\htdocs\New folder\app\Models\M_jawaban.php(18): CodeIgniter\Model->update(Array, 'id_peserta = 21')
+#3 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): App\Models\M_jawaban->updateJawaban('21', Array)
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-09-29 14:51:14 --> Return value of CodeIgniter\BaseModel::transformDataToArray() must be of the type array, string returned
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray('id_peserta = 21', 'update')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Model.php(646): CodeIgniter\BaseModel->update(Array, 'id_peserta = 21')
+#2 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(250): CodeIgniter\Model->update(Array, 'id_peserta = 21')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2021-09-29 14:57:14 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::where()
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-09-29 14:57:39 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::where()
+#0 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2021-09-29 15:00:57 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::update() must be of the type array or null, string given, called in C:\xampp\htdocs\New folder\app\Controllers\Peserta.php on line 254
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(254): CodeIgniter\Database\BaseBuilder->update('tbl_jawaban', Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('1')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 15:07:22 --> Undefined variable: tot_n
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(166): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 166, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('18')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 15:07:28 --> Undefined variable: tot_n
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(166): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 166, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('18')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:01:45 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('18')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:01:47 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('18')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:01:52 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('17')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:01:53 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('5')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:05:00 --> Undefined index: list_jawaban
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(269): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 269, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('2')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:07:23 --> Illegal string offset 'jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(283): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 283, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('2')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:07:42 --> Illegal string offset 'jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(283): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 283, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('2')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:08:23 --> Illegal string offset 'jawaban'
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(283): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string ...', 'C:\\xampp\\htdocs...', 283, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->simpan_jawaban('2')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:25:58 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('22')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:45:05 --> Trying to access array offset on value of type null
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(115): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'C:\\xampp\\htdocs...', 115, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->ujian_cat('57')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 20:57:59 --> Undefined index: nama_soal
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 105, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 21:04:17 --> Undefined index: nama_soal
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 105, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 21:04:29 --> Undefined index: nama_soal
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(105): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 105, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 21:06:15 --> Undefined index: nama_soal
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 21:07:24 --> Undefined index: nama_soal
+#0 C:\xampp\htdocs\New folder\app\Views\v_peserta\dashboard\index.php(104): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 104, Array)
+#1 C:\xampp\htdocs\New folder\app\Views\v_peserta\v_app.php(76): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(214): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\View\View.php(217): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Common.php(1092): CodeIgniter\View\View->render('v_peserta/v_app', Array, true)
+#5 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(27): view('v_peserta/v_app', Array)
+#6 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#7 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#8 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2021-09-29 21:22:17 --> Undefined property: App\Controllers\Peserta::$id_peserta
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 21:23:19 --> Undefined index: id_lab
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(30): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 21:23:36 --> Undefined property: App\Controllers\Peserta::$id_peserta
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 21, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2021-09-29 21:48:16 --> Undefined index: id_lab
+#0 C:\xampp\htdocs\New folder\app\Controllers\Peserta.php(25): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\xampp\\htdocs...', 25, Array)
+#1 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(802): App\Controllers\Peserta->index()
+#2 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(399): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peserta))
+#3 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\CodeIgniter.php(317): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\New folder\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\New folder\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

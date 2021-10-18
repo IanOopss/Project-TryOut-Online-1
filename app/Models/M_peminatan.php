@@ -10,6 +10,6 @@ class M_peminatan extends Model {
     protected $returnType     = 'array';
     protected $primaryKey     = 'id_peminatan';
     protected $allowedFields  = [
-		'nama_peminatan', 'jumlah_peserta', 'lampiran'
+		'nama_peminatan', 'jumlah_peserta', 'waktu_pengerjaan'
 	];
 }

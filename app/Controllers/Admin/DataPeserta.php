@@ -55,7 +55,7 @@ class DataPeserta extends Admin
 		$this->data['cek_peminatan'] = $this->peminatan->where('id_peminatan', $id_peminatan)->first();
 		
 		$this->data['kode1'] = $id_peminatan;
-		
+
 		return view('v_admin/v_app', $this->data);
 	}
 
@@ -130,6 +130,8 @@ class DataPeserta extends Admin
 
 	public function ajax_get_peserta($id_peminatan){
 		$list = $this->peserta->where('id_peminatan', $id_peminatan)->findAll();
+		$peminatan = $this->peminatan->where('id_peminatan', $id_peminatan)->first();
+
 		$data = array();
 		$no = $_POST['start'];
 		
@@ -141,7 +143,7 @@ class DataPeserta extends Admin
 			$row[] = $no;
 			$row[] = $personal['nama_peserta'];
 			$row[] = $personal['email'];
-			$row[] = $personal['id_peminatan'];
+			$row[] = $peminatan['nama_peminatan'];
 			$row[] = $this->berkas($nama_folder, $personal['bukti_pembayaran']);
 			$row[] = tgl_indonesia($personal['tgl_selesai_pendaftaran']);
 			$row[] = $personal['status_verifikasi'];

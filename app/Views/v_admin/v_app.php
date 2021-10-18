@@ -55,8 +55,8 @@
     include 'dashboard/admin_edit.php'; 
   }elseif ($page == 'informasi_pendaftaran'){ 
     include 'informasi_pendaftaran/index.php'; 
-  }elseif ($page == 'formasi_lab'){ 
-    include 'formasi_lab/index.php'; 
+  }elseif ($page == 'peminatan'){ 
+    include 'peminatan/index.php'; 
   }elseif ($page == 'jenis_soal'){ 
     include 'jenis_soal/index.php'; 
   }elseif ($page == 'pertanyaan_soal'){ 

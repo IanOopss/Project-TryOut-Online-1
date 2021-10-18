@@ -25,9 +25,7 @@
                     <th>Nama Kegiatan</th>
                     <th>Pendaftaran</th>
                     <th>Tutup</th>
-                    <th>Lulus Administrasi</th>
                     <th>Ujian CAT</th>
-                    <th>Waktu Pengerjaan</th>
                     <th>Alur Pendaftaran</th>
                     <th>Aksi</th>
                   </tr>
@@ -43,9 +41,7 @@
                     <td><?= $key['nama_kegiatan']; ?></td>
                     <td><?= tgl_indonesia($key['tgl_pendaftaran']); ?></td>
                     <td><?= tgl_indonesia($key['tgl_tutup']); ?></td>
-                    <td><?= tgl_indonesia($key['tgl_lulus_adm']); ?></td>
                     <td><?= tgl_indonesia($key['tgl_ujian_cat']); ?></td>
-                    <td><?= $key['waktu_pengerjaan']; ?></td>
                     <td>
                       <?php 
                         if ($key['alur_pendaftaran'] == "") {

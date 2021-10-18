@@ -33,9 +33,6 @@
                     <th>Nama Soal</th>
                     <th>Peminatan</th>
                     <th>Jumlah Soal</th>
-                    <th>Jumlah Minimal Benar</th>
-                    <th>Total Nilai</th>
-                    <th>Passing grade</th>
                     <th>Aksi</th>
                   </tr>
                   </thead>
@@ -50,9 +47,6 @@
                     <td><?= $jso['nama_soal']; ?></td>
                     <td><?= $jso['nama_peminatan']; ?></td>
                     <td><?= $jso['jumlah_soal']; ?></td>
-                    <td><?= $jso['minimal_benar']; ?></td>
-                    <td><?= $jso['total_nilai']; ?></td>
-                    <td><?= $jso['passing_grade']; ?></td>
                     </td>
                     <td>
 

@@ -15,9 +15,10 @@ class DataNilai extends Admin {
 		
 		// Data Nilai
 		$this->data['data_nilai'] = $this->peserta->nilaiPeserta($id_peminatan);
+		$this->data['matpel_peminatan'] = $this->soal->where('id_peminatan', $id_peminatan)->findAll();
 
-		$this->data['hasil'] = $this->nilai->findAll();
-		
+		$this->data['hasil'] = $this->nilai->orderBy('id_soal', 'ASC')->findAll();
+		dd($this->data);
 		return view('v_admin/v_app', $this->data);
 	}
 }

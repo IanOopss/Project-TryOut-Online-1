@@ -22,7 +22,7 @@ class M_peserta extends Model {
     public function nilaiPeserta($id){
         return $this->select('*')
 		            ->join('tbl_jawaban', 'tbl_jawaban.id_peserta = tbl_peserta.id_peserta', 'left')
-		            ->where('tbl_jawaban.status_jawaban', 'Selesai')
+		            ->where('tbl_jawaban.status_jawaban', '2')
 		            ->where('tbl_peserta.id_peminatan', $id)
                     ->findAll();
     }

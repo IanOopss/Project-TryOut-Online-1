@@ -9,7 +9,6 @@
             $kegiatan = $key['nama_kegiatan'];
             $tgl_pendaftaran = tgl_indonesia($key['tgl_pendaftaran']);
             $tgl_tutup = tgl_indonesia($key['tgl_tutup']);
-            $tgl_lulus_adm = tgl_indonesia($key['tgl_lulus_adm']);
             $tgl_ujian_cat = tgl_indonesia($key['tgl_ujian_cat']);
         } ?>
         <!-- Single Hero Slide -->
@@ -109,19 +108,6 @@
                     <div class="course-content">
                         <h4>Pendaftaran</h4>
                         <p>Pendaftaran dapat dilakukan melalui website pada tanggal <?= $tgl_pendaftaran; ?> sampai dengan tanggal <?= $tgl_tutup; ?>.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Single Course Area -->
-            <div class="col-12 col-sm-6 col-lg-4">
-                <div class="single-course-area d-flex align-items-center mb-100 wow fadeInUp" data-wow-delay="700ms">
-                    <div class="course-icon">
-                        <i class="icon-responsive"></i>
-                    </div>
-                    <div class="course-content">
-                        <h4>Administrasi</h4>
-                        <p>Pengumuman lulus administrasi pada tanggal <?= $tgl_lulus_adm; ?> melalui website.</p>
                     </div>
                 </div>
             </div>

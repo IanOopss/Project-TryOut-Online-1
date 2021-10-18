@@ -8,10 +8,9 @@
     <p class="login-box-msg">Login Peserta</p>
 
       <div class="callout callout-info">
-          <h4>Lulus Administrasi !</h4>
+          <h4>TryOut Online</h4>
 
-          <p>Pengumuman Lulus Administrasi pada tanggal <?= tgl_indonesia($tgl_lulus_adm); ?></p>
-          <p>Silakan Login Dengan NIM dan Password Anda pada tanggal <?= tgl_indonesia($tgl_lulus_adm); ?></p>
+          <p>Silakan Login pada tanggal <?= tgl_indonesia($tgl_ujian_cat); ?> untuk mengikuti tryout online</p>
         </div>
       <div class="row">
         <!-- /.col -->

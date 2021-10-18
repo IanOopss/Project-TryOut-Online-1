@@ -26,10 +26,8 @@
                         <i class="icon-assistance"></i>
                     </div>
                     <div class="course-content">
-                        <h4><?= $key['nama_lab'] ?></h4>
-                        <p>Jumalah Formasi : <?= $key['jumlah_formasi'] ?> </p>
+                        <h4><?= $key['nama_peminatan'] ?></h4>
                         <p>Jumlah Pelamar : <?= $key['jumlah_peserta'] ?></p>
-                        <a href="<?= base_url('home/download/'.$key['lampiran']); ?>">Download Persyaratan</a>
                     </div>
                 </div>
             </div>
